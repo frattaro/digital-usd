@@ -1,0 +1,20 @@
+# Site settings
+title: Digital USD
+description: Documentation for a replacement system for ACH and Fedwire based on a decentralized tokenization system.
+author: Anton Frattaroli
+email: frattaro@gmail.com
+baseurl: "/digital-usd"
+url: "https://frattaro.github.io"
+
+# Theme settings
+theme: jekyll-theme-minima
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  toc_levels: 2..2
+
+# Other common settings (optional)
+paginate: 5
+paginate_path: "/page:num/"

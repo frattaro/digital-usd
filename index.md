@@ -4,15 +4,8 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ---
 
-- [I. Core Protocol Architecture](#i-core-protocol-architecture)
-- [II. Compliance & Enforcement](#ii-compliance--enforcement)
-- [III. Banking & Transitional Design](#iii-banking--transitional-design)
-- [IV. Currency Swaps](#iv-currency-swaps)
-- [V. Monetary Policy Design](#v-monetary-policy-design)
-- [VI. Taxation & Accounting](#vi-taxation--accounting)
-- [VII. System Design Principles](#vii-system-design-principles)
-- [VIII. Multi-Currency Expansion](#viii-multi-currency-expansion)
-- [IX. Physical Cash Integration](#ix-physical-cash-integration)
+* TOC
+{:toc}
 
 ---
 
@@ -24,7 +17,7 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 - All real reserves are token-based; there is no support for synthetic dollar creation at the protocol level.
 
 ### 2. KYC-Attested Wallets
-- All wallets must include a KYC attestation issued by an approved identity attestor.
+- All wallets must include a Know Your Customer (KYC) attestation issued by an approved identity attestor.
 - Attestations include metadata such as jurisdictional origin (e.g. country code).
 - This enables:
   - Regulatory compliance
@@ -84,40 +77,14 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 - The Fed sets the minimum yield rate to throttle liquidity velocity.
 - Replaces Fed Funds Rate and Interest on Reserve Balances (IORB) as transitional mechanisms.
 
-### 3. Token Authority Nodes
-- All token authorities (USD or others) must operate nodes.
-- Nodes serve as:
-  - Staking endpoints
-  - Currency swap anchors
-  - Compliance enforcement boundaries
-
-### 4. Interbank Lending Remains Off-Chain
+### 3. Interbank Lending Remains Off-Chain
 - Interbank loans are managed through off-chain agreements between institutions.
 - The protocol does not include loan execution, enforcement, or collateral logic.
 - Lending behavior and risk management are left to the application layer.
 
 ---
 
-## IV. 💱 Currency Swaps
-
-### 1. USD as Default Routing Path
-- All currency swaps route through USD:
-  - Example: `WMT → USD → SBX` (not `WMT → SBX`)
-- Prevents forced holding of foreign corporate tokens.
-- Keeps accounting and compliance simple and consistent.
-
-### 2. Swap Logic is Protocol-Native
-- No smart contracts are needed for swaps.
-- Keeps swap behavior simple, predictable, and tax-compliant.
-
-### 3. Token Authority Supply Control
-- Each token authority defines how its token supply changes.
-- They may mint, burn, or hold stable supplies.
-- They are not required to mint/burn at a fixed rate or provide symmetric liquidity.
-
----
-
-## V. 🪙 Monetary Policy Design
+## IV. 🪙 Monetary Policy Design
 
 The system enables each token authority to define its own policy logic. However, Federal Reserve policy receives special handling to support transitional compatibility.
 
@@ -137,7 +104,7 @@ The system enables each token authority to define its own policy logic. However,
 
 ---
 
-## VI. 📉 Taxation & Accounting
+## V. 📉 Taxation & Accounting
 
 ### 1. External Tax Handling
 - Tax compliance is **not** enforced by the protocol.
@@ -153,7 +120,7 @@ The system enables each token authority to define its own policy logic. However,
 
 ---
 
-## VII. 🧠 System Design Principles
+## VI. 🧠 System Design Principles
 
 ### 1. Protocol-Level Neutrality
 - Core protocol handles:
@@ -173,25 +140,33 @@ The system enables each token authority to define its own policy logic. However,
 
 ---
 
-## VIII. 🏛️ Multi-Currency Expansion
+## VII. 🏛️ Multi-Currency Expansion
 
-This protocol is designed to support additional tokens and issuers over time.
+This protocol is designed to support multiple currencies beyond digital USD, including both corporate and sovereign tokens. Each token is issued by a token authority responsible for supply and policy, while swap functionality and liquidity are provided by independent, fee-incentivized nodes.
 
 ### 1. Token Authorities
-- Each token is governed by a token authority responsible for its minting and redemption rules.
-- Example: Corporate tokens (WMT, SBX), government tokens (USD, MXN), or synthetic tokens backed by assets.
+- A token authority is responsible for minting and redeeming its own currency.
+- Authorities are not required to operate validator nodes or provide swap liquidity.
+- Examples include: the Federal Reserve (USD), Walmart (WMT), or third-party synthetic issuers.
 
-### 2. Policy Interoperability
-- Competing currencies act as policy checks on one another via swap incentives.
-- No central authority governs the system as a whole — token authorities compete for utility and adoption.
+### 2. Currency Swap Infrastructure
+- Swaps are routed through USD by default (e.g., `WMT → USD → SBX`).
+- Each swap involves one or more liquidity providers holding real balances in both tokens.
+- These providers stake funds and earn swap fees proportional to usage.
+- Unpopular or new tokens may lack sufficient liquidity to support swaps.
 
-### 3. FX Behavior Without "Foreignness"
-- While not all tokens are international, the behavior of currency swaps resembles foreign exchange (FX).
-- Swap pricing, slippage, and volatility emerge through routing design and staking incentives.
+### 3. Liquidity Dynamics
+- Only the Fed can mint USD; all USD liquidity must be staked by holders.
+- Swap failure is possible when no liquidity path exists, which is surfaced to users at transaction time.
+- Stakers are naturally incentivized to support tokens with high demand or frequent swaps.
+
+### 4. Monetary Competition
+- Swap patterns create natural pressure on token policies.
+- Well-governed currencies will be easier to trade and more useful, while poorly managed tokens will face liquidity scarcity.
 
 ---
 
-## IX. 💵 Physical Cash Integration
+## VIII. 💵 Physical Cash Integration
 
 ### 1. Tamper-Evident Tear-Open QR Code Cash
 
