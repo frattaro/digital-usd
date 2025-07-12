@@ -5,7 +5,7 @@ nav_order: 6
 
 # 🛠️ Digital USD – Implementation Notes
 
-This document provides implementation-level guidance for building the Digital USD infrastructure as described in the [System Overview](/). It focuses on protocol-level design, system modifications, and transitional integration with current financial infrastructure.
+This document provides implementation-level guidance for building the Digital USD infrastructure as described in the [System Overview](/digital-usd). It focuses on protocol-level design, system modifications, and transitional integration with current financial infrastructure.
 
 ---
 

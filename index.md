@@ -52,7 +52,7 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ## III. 🏦 Banking & Transitional Design
 
-See [Transitional Lending](/transitional-lending)
+See [Transitional Lending Model](/digital-usd/transitional-lending-model)
 
 ---
 
@@ -74,7 +74,7 @@ The system enables each token authority to define its own policy logic. However,
 - Digital USD tokens held by banks are actual reserves.
 - Interbank lending becomes a staking mechanism rather than an informal overnight repo system.
 
-See [monetary policy](/monetary-policy) for more details
+See [monetary policy](/digital-usd/monetary-policy) for more details
 
 ---
 
@@ -149,6 +149,6 @@ A complete implementation of this protocol requires:
 - Supporting SDK-based integration for financial core providers
 - Integrating Treasury-controlled QR-code note issuance
 
-For details, see: [/implementation-notes/](/implementation-notes/)
+For details, see: [Implementation Notes](/digital-usd/implementation-notes)
 
 ---
