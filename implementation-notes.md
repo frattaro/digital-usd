@@ -1,3 +1,7 @@
+---
+title: Implementation notes
+nav_order: 6
+---
 
 # 🛠️ Digital USD – Implementation Notes
 

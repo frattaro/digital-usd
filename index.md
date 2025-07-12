@@ -1,3 +1,8 @@
+---
+title: Overview
+nav_order: 1
+---
+
 # 🧭 Digital USD Infrastructure – System Overview
 
 This document outlines a replacement settlement infrastructure for the U.S. dollar. It provides a modern, programmable alternative to Fedwire and ACH using KYC-attested wallets and tokenized USD. It introduces staking-based liquidity management, automated compliance, and eventual support for additional currencies — all while preserving compatibility with existing financial institutions and policy.

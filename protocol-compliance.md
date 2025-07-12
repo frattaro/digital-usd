@@ -1,3 +1,7 @@
+---
+title: Protocol Compliance
+nav_order: 2
+---
 
 # 🛡️ Why Compliance Must Be Protocol-Level
 

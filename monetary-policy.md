@@ -1,3 +1,7 @@
+---
+title: Monetary Policy
+nav_order: 3
+---
 
 # 🏛️ Token Authority & Monetary Policy Specification
 

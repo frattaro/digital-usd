@@ -1,3 +1,7 @@
+---
+title: SDK Specification
+nav_order: 7
+---
 
 # 💻 Digital USD SDK Specification – Heiro Ledger
 

@@ -1,3 +1,8 @@
+---
+title: QR Code Cash
+nav_order: 5
+---
+
 # 💵 QR Code Cash
 
 ## 1. Tamper-Evident Tear-Open QR Code Cash

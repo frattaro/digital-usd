@@ -1,3 +1,8 @@
+---
+title: Transitional Lending
+nav_order: 4
+---
+
 # 🏦 Transitional Lending Model in the Digital USD System
 
 This document outlines how traditional bank lending and synthetic balance behavior can persist during the transition to a token-based settlement system. It preserves the user experience of fractional reserve banking while enforcing strict reserve discipline at the protocol level.
