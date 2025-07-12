@@ -124,13 +124,23 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 - Examples include: the Federal Reserve (USD), Walmart (WMT), or third-party synthetic issuers.
 
 ### 2. Currency Swap Infrastructure
-- Swaps are routed through USD by default (e.g., `WMT → USD → SBX`).
-- Each swap involves one or more liquidity providers holding real balances in both tokens.
-- These providers stake funds and earn swap fees proportional to usage.
-- Unpopular or new tokens may lack sufficient liquidity to support swaps.
+
+- Swaps occur through token **liquidity pools**, each backed by real reserves in both tokens.
+- Pools are created by **liquidity providers** who deposit two-token pairs (e.g., WMT/SBX) into a swap contract.
+- Swap fees are distributed to pool providers proportional to usage.
+- There is **no default routing through USD** — direct pairs must exist to support a swap.
+- Swap quotes may fall back to multi-hop routes (e.g., WMT → XYZ → SBX) if liquidity paths exist, but routing is market-driven.
+- Token authorities may seed liquidity pools with reserves to bootstrap adoption.
+
+> 🔄 Note: Swap liquidity is **not provided by staking**.
+>
+> - **Staking**: Locks tokens to slow monetary velocity and earn yield set by token authorities.
+> - **Liquidity Provisioning**: Deposits tokens into swap pools to enable trades and earn variable swap fees.
+>
+> These are separate mechanisms with distinct incentives, cooldown rules, and monetary effects.
 
 ### 3. Liquidity Dynamics
-- Only the Fed can mint USD; all USD liquidity must be staked by holders.
+- Only the Fed (as a token authority) can mint USD; all USD liquidity must be staked by holders.
 - Swap failure is possible when no liquidity path exists, which is surfaced to users at transaction time.
 - Stakers are naturally incentivized to support tokens with high demand or frequent swaps.
 
