@@ -45,42 +45,9 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ---
 
-## II. 🧩 Compliance & Enforcement
-
-### 1. Sanctions Enforcement
-- Every transaction checks two deny list formats:
-  - Individual-level KYC hashes
-  - Country-pair bans (e.g., from_country → to_country)
-- Deny lists are synced hourly from a U.S. Treasury API service.
-
-### 2. Immutable Attestations
-- KYC attestations are permanently attached to wallets.
-- They cannot be revoked, deleted, or purged after issuance.
-
-### 3. Freeze & Legal Reporting
-- Wallets can be frozen using a sanctions-style deny list.
-- Banks or institutions may use public transaction data to report activity under AML/SAR/CTR rules.
-
----
-
 ## III. 🏦 Banking & Transitional Design
 
-### 1. Support for Fractional Reserve Banking
-- Banks may operate traditional internal ledgers that do not reflect full reserve backing.
-- However, **withdrawals must be settled in real tokens** at the time of execution.
-- Withdrawals may occur in any supported token (not just USD).
-
-### 2. Staking-Based Interbank Liquidity
-- Banks and large holders may stake surplus USD tokens.
-- Staked liquidity is used by other institutions to fulfill short-term needs (e.g. withdrawal pressure).
-- The protocol mints yield as compensation.
-- The Fed sets the minimum yield rate to throttle liquidity velocity.
-- Replaces Fed Funds Rate and Interest on Reserve Balances (IORB) as transitional mechanisms.
-
-### 3. Interbank Lending Remains Off-Chain
-- Interbank loans are managed through off-chain agreements between institutions.
-- The protocol does not include loan execution, enforcement, or collateral logic.
-- Lending behavior and risk management are left to the application layer.
+See [Transitional Lending](/transitional-lending)
 
 ---
 
@@ -102,7 +69,7 @@ The system enables each token authority to define its own policy logic. However,
 - Digital USD tokens held by banks are actual reserves.
 - Interbank lending becomes a staking mechanism rather than an informal overnight repo system.
 
-See (monetary policy)[/monetary-policy] for more details
+See [monetary policy](/monetary-policy) for more details
 
 ---
 
@@ -165,45 +132,6 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 ### 4. Monetary Competition
 - Swap patterns create natural pressure on token policies.
 - Well-governed currencies will be easier to trade and more useful, while poorly managed tokens will face liquidity scarcity.
-
----
-
-## VIII. 💵 Physical Cash Integration
-
-### 1. Tamper-Evident Tear-Open QR Code Cash
-
-- Physical bills are printed by the U.S. Treasury and each corresponds to a **unique wallet** containing a fixed amount of digital USD tokens.
-- Each note has a **tamper-evident seal** hiding the **private key**, and a **visible QR code** showing the public wallet address.
-- These notes **function exactly like physical cash**: whoever possesses the paper, possesses the funds.
-
-### 2. Treasury-Managed Issuance
-
-- The U.S. Treasury creates a new wallet for every note printed.
-- The treasury mints digital USD tokens into each wallet in advance.
-- The private key is printed and sealed inside the note at the time of issuance.
-- Denominations are fixed and printed directly on the note (e.g., $1, $5, $20).
-
-### 3. Usage Behavior
-
-- **Spending** a note does *not* require opening it.
-- The bearer physically hands the note to the recipient, just like cash.
-- **Transferring** the funds to a digital wallet **does** require opening the seal and scanning the private key.
-- Once opened, the note is considered void for further physical transfer, as its private key is exposed.
-
-### 4. Offline Utility and Finality
-
-- Notes enable **offline peer-to-peer payments**, disaster recovery, and unbanked commerce.
-- Value is **inherent to the physical item**, similar to bearer instruments.
-- Finality is physical until the wallet is drained or the note is opened.
-
-### 5. Anti-Fraud and Verification
-
-- Public QR code allows anyone to verify the balance of a note in real time.
-- Scanning the public key reveals:
-  - Amount
-  - Status (unspent/spent)
-  - Wallet history (if transferred digitally)
-- Tamper-evident seals prevent covert access to the private key.
 
 ---
 

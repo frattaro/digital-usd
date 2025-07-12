@@ -37,14 +37,21 @@ To restore legal safety for individuals and reduce institutional overhead, the D
 
 ### ✅ KYC-Attested Wallets
 - Every wallet must include a signed attestation from an approved identity attestor.
+- KYC attestations are permanently attached to wallets.
+- They cannot be revoked, deleted, or purged after issuance.
 
 ### ✅ Attestor Whitelisting
 - Transfers only succeed if the attestation comes from an approved `attestor_id`.
+- Approved attestor lists are synced hourly from a U.S. Treasury API service.
 
 ### ✅ Sanctions Screening
 - The protocol checks each transfer against:
-  - `jurisdiction` deny lists
+  - `jurisdiction` pair deny lists (from_country → to_country)
   - (`attestor_id`, `attestation_id`) sanctions lists
+- Deny lists are synced hourly from a U.S. Treasury API service.
+
+### ✅ Freeze & Legal Reporting
+- Wallets can be frozen using a sanctions-style deny list.
 
 ### ✅ Immutable Public Ledger
 - Enables external audit tooling and compliance monitoring (e.g. SAR triggers) without requiring wallet-holders to self-report.
@@ -75,4 +82,3 @@ The Digital USD system preserves **legal clarity**, **user safety**, and **insti
 
 It's not just more programmable money — it's **safer money by default**.
 
----

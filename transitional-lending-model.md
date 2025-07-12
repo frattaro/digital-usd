@@ -98,3 +98,19 @@ This model allows:
 - Fed backstopping via legal asset exchange
 
 All lending is off-chain, auditable, and reliant on actual reserves — preserving flexibility while enforcing monetary realism.
+
+---
+
+## VIII. 🏦 Interbank Liquidity Design
+
+### 1. Staking-Based Interbank Liquidity
+- Banks and large holders may stake surplus USD tokens.
+- Staked liquidity is used by other institutions to fulfill short-term needs (e.g. withdrawal pressure).
+- The protocol mints yield as compensation.
+- The Fed sets the minimum yield rate to throttle liquidity velocity.
+- Replaces Fed Funds Rate and Interest on Reserve Balances (IORB) as transitional mechanisms.
+
+### 2. Interbank Lending Remains Off-Chain
+- Interbank loans are managed through off-chain agreements between institutions.
+- The protocol does not include loan execution, enforcement, or collateral logic.
+- Lending behavior and risk management are left to the application layer.

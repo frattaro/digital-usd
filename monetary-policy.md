@@ -44,7 +44,7 @@ Token authorities control monetary policy not through interest rates or reserve 
 | Lever | Description | Economic Effect |
 |-------|-------------|-----------------|
 | `minimum_yield` | Guarantee a baseline return for staking | Higher yield = lower velocity |
-| `cooldown_period` | Lock-up time before funds can be unstaked | Longer period = more stable liquidity |
+| `cooldown_period` | Lock-up time before funds can be unstaked | Longer period = longer time to respond to liquidity changes |
 | `mint_and_stake()` | Create and lock tokens to inject liquidity | Analogous to QE |
 | `burn_staked()` | Remove staked tokens to reduce liquidity | Analogous to QT |
 

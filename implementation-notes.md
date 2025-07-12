@@ -54,33 +54,6 @@ This document provides implementation-level guidance for building the Digital US
 }
 ```
 
-Similar to the sanctions/frozen wallet deny list, the US Treasury will need to keep track of and provide an API service for allowed `attestor_id`s, and have that available for hourly syncing with service nodes.
-
-### 3. Protocol Enforcement
-- Transfers require matching attestations based on token policy
-- Validators enforce sanctions list and jurisdictional restrictions via attestation metadata
-
----
-
-## V. 💵 QR Cash Format
-
-### 1. Bill Format
-- Standard U.S. bill size (156mm x 66mm)
-- Public QR (wallet address) printed visibly
-- Private key hidden under **tamper-evident tear seal**
-- Paper composition similar to cotton-linen cash
-
-### 2. Treasury Issuance
-- Each note corresponds to a unique wallet
-- Treasury creates unique wallet at print time, does not store keys after printing
-- Printed denomination matches wallet balance
-- Treasury can actually see exactly how much cash exists
-
-### 3. Usage Flow
-- **Unopened note** can be handed off as cash
-- **Opened note** allows redemption to digital wallet
-- Spent notes show zero balance and are voided visually
-
 ---
 
 ## VI. 🏦 Banking Integration & Cutover
