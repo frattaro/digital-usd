@@ -19,3 +19,6 @@ kramdown:
 # Other common settings (optional)
 paginate: 5
 paginate_path: "/page:num/"
+
+aux_links:
+  View on GitHub: https://github.com/frattaro/digital-usd
