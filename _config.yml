@@ -6,9 +6,6 @@ email: frattaro@gmail.com
 baseurl: "/digital-usd"
 url: "https://frattaro.github.io"
 
-# Theme settings
-theme: jekyll-theme-minima
-
 # Build settings
 markdown: kramdown
 kramdown:
