@@ -11,12 +11,6 @@ nav_order: 5
 - Each note has a **tamper-evident seal** hiding the **private key**, and a **visible QR code** showing the public wallet address.
 - These notes **function exactly like physical cash**: whoever possesses the paper, possesses the funds.
 
-### 2. Bill Format
-- Standard U.S. bill size (156mm x 66mm)
-- Public QR (wallet address) printed visibly
-- Private key hidden under **tamper-evident tear seal**
-- Paper composition similar to cotton-linen cash
-
 ## 3. Treasury-Managed Issuance
 
 - The U.S. Treasury creates a new wallet for every note printed.
