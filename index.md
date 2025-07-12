@@ -102,6 +102,8 @@ The system enables each token authority to define its own policy logic. However,
 - Digital USD tokens held by banks are actual reserves.
 - Interbank lending becomes a staking mechanism rather than an informal overnight repo system.
 
+See (monetary policy)[/monetary-policy] for more details
+
 ---
 
 ## V. 📉 Taxation & Accounting
@@ -205,3 +207,15 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 
 ---
 
+## IX. 🛠️ Implementation Notes
+
+A complete implementation of this protocol requires:
+
+- Forking the Heiro token service open-source ledger codebase
+- Replacing HBAR with a base-layer USD token
+- Supporting SDK-based integration for financial core providers
+- Integrating Treasury-controlled QR-code note issuance
+
+For details, see: [/implementation-notes/](/implementation-notes/)
+
+---
