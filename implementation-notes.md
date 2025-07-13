@@ -1,42 +1,73 @@
 ---
-title: Implementation notes
+title: Implementation Notes
 nav_order: 6
 ---
 
-# 🛠️ Digital USD – Implementation Notes
+# 🛠️ Tokenized Settlement System – Implementation Notes
 
-This document provides implementation-level guidance for building the Digital USD infrastructure as described in the [System Overview](/digital-usd). It focuses on protocol-level design, system modifications, and transitional integration with current financial infrastructure.
+This document provides implementation-level guidance for deploying the Direct Settlement Protocol on the Heiro ledger. It outlines how to configure a high-performance distributed ledger for real-value token settlement, staking-based monetary policy, and interoperable multi-token operation.
+
+While the first production token is expected to be a digital USD issued by the Federal Reserve, the protocol is explicitly designed to support additional sovereign, corporate, or institutional tokens with independent governance and monetary rules.
 
 ---
 
 ## I. 🎯 Project Scope
 
-- Replace ACH and Fedwire with a high-performance distributed ledger
-- Use a **native token (USD)** backed by Federal Reserve issuance
-- Preserve compatibility with Treasury cash operations and existing bank infrastructure
-- Enable **future support** for competing currencies
+- Replace legacy settlement networks (e.g., Fedwire, ACH) with a programmable, auditable ledger system
+- Launch with a **single token** issued by a founding token authority (e.g., the Federal Reserve issuing digital USD)
+- Establish core primitives for:
+  - Token issuance and burning
+  - Protocol-enforced compliance
+  - Wallet creation with attestation
+  - Velocity control via staking
+  - Swap infrastructure for future multi-token expansion
+- Preserve compatibility with existing financial institutions (e.g., core banking software, Treasury workflows)
+- Serve as a general-purpose foundation for other tokens with custom monetary policies
 
 ---
 
-## II. 🔧 Forking Heiro ledger services and Replacing HBAR
+## II. 🔧 Bootstrapping the Ledger and Token Authority
 
-### 1. Clone & Customize Heiro Services Node
-- Start from: [https://github.com/hiero-ledger/hiero-consensus-node](https://github.com/hiero-ledger/hiero-consensus-node)
+### 1. Fork Heiro Ledger Token Service
+- Clone: [https://github.com/hiero-ledger/hiero-consensus-node](https://github.com/hiero-ledger/hiero-consensus-node)
 - License: Apache 2.0
+- Remove legacy HBAR-specific logic:
+  - Eliminate `hbarBalance` fields
+  - Replace default fee and staking logic with token-specific parameters
+  - Strip system reward features unrelated to the token layer
 
-### 2. Remove/Stub HBAR Logic
-- Eliminate `hbarBalance` fields from account structures
-- Refactor fee calculation logic to default to `TokenID(USD)`
-- Strip staking, IORB yield, and system reward logic tied to HBAR
-- Replace all fee payment and transaction execution costs with USD-only accounting
+### 2. Define and Initialize the First Token
 
-### 3. Bootstrap Native USD Token
-- Create `TokenID(0.0.1001)` at genesis block
-- Hardcode as system-reserved "base currency"
-- Treasury wallet (e.g. `0.0.2`) receives initial mint
-- USD token enforces:
-  - No user mint/burn
-  - Transferability restricted by attestation
+The founding token authority (e.g., the Federal Reserve) should first create its primary wallet, which will be used for minting, staking, and reserve operations.
+
+To launch the first system token, the authority performs two steps:
+
+1. **Create the token** via `createToken()`:
+
+```jsonc
+{
+  "symbol": "USD",
+  "description": "Digital U.S. Dollar",
+  "decimals": 2,
+  "staking_yield": 0.025,       // 2.5% APY
+  "cooldown_period": 259200,    // 3 days (in seconds)
+  "swap_fee": 3,                // 3 tokens, or a percentage of the swap amount
+  "staking_inflation_cap": 0.02 // 2% annualized mint cap for yield
+}
+```
+
+The `createToken()` method returns a `token_id` assigned by the system.
+
+2. **Mint the initial supply** via `mintTokens(wallet, amount, fee_wallet, fee_token)`
+
+- Minting to a wallet is explicit. It does **not** stake automatically.
+- The **first mint** (when system token count is zero) is **free**.
+- All subsequent mints require a **fee**, deducted from `fee_wallet`, in the specified `fee_token`.
+- Node operators must publish a list of **accepted fee tokens**. The protocol will reject any mint request that attempts to pay fees in unsupported tokens. Applications should call `getAcceptedFeeTokens()` before submitting.
+
+This token becomes the **first system-reserved settlement asset**, with special handling in SDK defaults and liquidity pools.
+
+Additional tokens may be created using the same two-step process by other authorized entities, using their own policies and parameters.
 
 ---
 
@@ -44,17 +75,18 @@ This document provides implementation-level guidance for building the Digital US
 
 ### 1. Wallet Creation Flow
 - User creates keypair via app
-- Submits KYC to approved attestation provider (e.g. Socure, Alloy)
+- Submits KYC to approved attestation provider (e.g. Socure, Alloy) and recieves attestation.
+- Wallet attestation endpoint is called, during which attestation is verified via public attestor validation endpoint referenced from US Treasury allowlist.
 - Attestation is signed and stored on-chain or as verifiable credential
 
 ### 2. Attestation Schema
 ```json
 {
-  "wallet": "0xABC...", // wallet identifier
+  "wallet": "0xABC...", // wallet identifier - 256-bit hash of public key
   "attestor_id": "attestor:us:001", // any string identifier supplied by US treasury
   "attestation_id": "4f3e8c51-d3c7-44f4-b77a-0123efabfa9a", // can be any string identifier
   "jurisdiction": "US", // All jurisdictional country codes in attestations follow **ISO 3166-1 alpha-2** (2-letter format)
-  "timestamp": "2025-07-08T12:15:00Z" // standard ISO date format in GMT
+  "issued_at": "2025-07-08T12:15:00Z" // standard ISO date format in GMT
 }
 ```
 
