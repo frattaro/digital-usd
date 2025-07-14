@@ -37,19 +37,53 @@ This document outlines the technical, operational, and institutional resources r
 - Internal system mapping to synthetic balance models
 - Legal/compliance liaison support for onboarding
 
-## 4. U.S. Treasury Implementation Team
-- Sanctions enforcement and denylist infrastructure
-- Attestor certification and monitoring
-- Public attestation lookup APIs
-- QR-cash design and distribution coordination
+---
 
-## 5. Federal Reserve Token Authority Team
+## 4. U.S. Treasury Responsibilities
+
+### A. KYC Attestor Oversight Team
+- Approves and certifies attestors (domestic and international)
+- Maintains public list of attestor identities and validation endpoints
+- Ensures attestor compliance with U.S. identity schema standards
+- Provides revocation and renewal mechanisms for attestor credentials
+
+### B. Denylist Administration Team
+- Maintains a cryptographically signed, publicly accessible denylist
+- Accepts court orders and law enforcement inputs for denylist updates
+- Coordinates with OFAC and FinCEN for sanctions-related entries
+- Provides administrative UI and a versioned API for protocol access
+
+> Note: The software for denylist management is straightforward: admin website + versioned API + auditable storage. The operational effort lies in collecting and vetting denylist entries.
+
+### C. U.S. Mint: QR-Cash Design and Coordination
+- Designs tamper-evident, tear-open QR-cash notes
+- Embeds private keys in physical instruments securely
+- Coordinates with ATM vendors and distributors for rollout
+- Establishes redemption and verification tooling for QR-cash lifecycle
+
+---
+
+## 5. Department of Justice Responsibilities
+
+### A. AML/SAR/CTR Monitoring and Enforcement Team
+- Monitors on-chain activity using existing blockchain analytics tools
+- Flags suspicious patterns, structuring, or wash behaviors
+- Files subpoenas or court orders to attestors for identity resolution
+- Refers cases for prosecution or further enforcement
+
+> DOJ does not interact with the protocol directly. Instead, it operates in the application layer and judicial system — using chain data as evidence and leveraging attestors for identity correlation.
+
+---
+
+## 6. Federal Reserve Token Authority Team
 - Token issuance governance and mint authorization logic
 - Implementation of monetary policy via staking yields
 - Emergency response protocols and monetary backstops
 - Participation in protocol governance and upgrades
 
-## 6. Regulatory Coordination Team
+---
+
+## 7. Regulatory Coordination Team
 - Liaison roles with:
   - Federal Reserve Board of Governors
   - OCC, FDIC, CFPB, FinCEN
@@ -57,18 +91,24 @@ This document outlines the technical, operational, and institutional resources r
 - Legal carve-out and amendment work
 - Elimination of duplicative compliance burdens
 
-## 7. Security, Audit, and Privacy Infrastructure
+---
+
+## 8. Security, Audit, and Privacy Infrastructure
 - Formal verification of ledger rules
 - Network security and validator hardening
 - Red-team adversarial testing
 - Audit and forensic support tooling
 - Attestation fraud handling and dispute resolution
 
-## 8. Communications and Adoption Strategy
+---
+
+## 9. Communications and Adoption Strategy
 - Bank and fintech onboarding campaigns
 - Public wallet and QR-cash usage education
 - Legal and regulatory explainer materials
 - Messaging around compliance, privacy, and accountability
+
+---
 
 ## Optional but Recommended
 - Academic and technical advisory group
@@ -77,7 +117,26 @@ This document outlines the technical, operational, and institutional resources r
 
 ---
 
+## Congressional Authority — Required?
+
+### Not necessarily:
+- Treasury and DOJ already have the mandate to enforce sanctions, conduct financial investigations, and issue secure currency.
+
+### But likely in practice:
+- Treasury may request:
+  - New funding for attestor and denylist teams
+  - Authorization for identity resolution APIs
+  - Explicit mandate to participate in global digital infrastructure
+- DOJ may require:
+  - Expanded authority to act on wallet-based pseudonymity
+  - Budget reallocation for permanent blockchain surveillance units
+
+> Even if not legally required, congressional buy-in provides political support, ensures budget continuity, and reduces institutional hesitation.
+
+---
+
 ## Summary
+
 This deployment spans cryptographic engineering, legal infrastructure, bank coordination, and policy design. With focused leadership and institutional buy-in, a national rollout of the Digital USD protocol could be achieved within 18–36 months.
 
 ---
