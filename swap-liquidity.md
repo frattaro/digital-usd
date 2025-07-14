@@ -54,6 +54,17 @@ swap(tokenIn, tokenOut, amountIn, options?)
 ```
 
 - Uses a **constant product AMM** model (`x * y = k`)
+>Upon further analysis, this will probably be an AMM/matching hybrid.
+>This supports slippage control and lets users reject unfair trades. You could extend this to a quote-broadcasting model, where:
+>
+>User submits swapIntent with desired amount and fee cap
+>
+>Nodes or LPs respond with offers (quoteID, expected output)
+>
+>User selects best quote and finalizes swap
+>
+>That’s quasi-matching without needing an on-chain order book. It’s stateless, competitive, and front-running-resistant if timed correctly (e.g., using signed commitments with timeouts).
+>But definitely needs more research.
 - Charges the specified pool fee (basis points + optional flat)
 - Sends `amountOut` to recipient wallet
 

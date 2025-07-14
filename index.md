@@ -7,6 +7,8 @@ nav_order: 0
 
 **Replacing Fedwire and ACH — without breaking the economy.**
 
+>This project outlines a protocol-level replacement for Fedwire and ACH, using KYC-attested wallets, tokenized reserves, and programmable compliance — all without requiring new laws or speculative crypto infrastructure. It is designed to be legally safe, technically feasible, and operationally neutral, while providing a path toward modern, accountable monetary infrastructure.
+
 ---
 
 ## Overview
