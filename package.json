@@ -1,0 +1,22 @@
+{
+  "name": "digital-usd",
+  "version": "1.0.0",
+  "scripts": {
+    "pdf": "node merge.js && md-to-pdf combined.md && rimraf combined.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frattaro/digital-usd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frattaro/digital-usd/issues"
+  },
+  "homepage": "https://github.com/frattaro/digital-usd#readme",
+  "description": "",
+  "dependencies": {
+    "md-to-pdf": "5.2.4",
+    "rimraf": "6.0.1"
+  }
+}
