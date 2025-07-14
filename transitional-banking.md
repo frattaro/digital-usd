@@ -1,9 +1,9 @@
 ---
-title: Transitional Lending
+title: Transitional Banking
 nav_order: 4
 ---
 
-# 🏦 Transitional Lending Model in the Digital USD System
+# 🏦 Transitional Banking Model in the Digital USD System
 
 This document outlines how traditional bank lending, deposit capture, and custodial services can persist during the transition to a token-based settlement system. It preserves user-friendly interfaces and synthetic balances while enforcing strict monetary discipline at the protocol level.
 
@@ -45,9 +45,12 @@ Banks must hold enough on-chain tokens to meet their real settlement obligations
 - Users may deposit digital USD into bank-owned wallets.
 - Once deposited, custody is transferred — users interact with a **synthetic balance**.
 
-### 2. Staking-Based Liquidity Pool
-- Banks may borrow from a shared liquidity pool backed by staked tokens.
-- Participants earn yield; unstaking delays prevent withdrawal shocks.
+### 2. Central Bank Staking (Monetary Tool)
+- Token authorities may choose to offer protocol-level staking yield.
+- Yield is funded via **controlled minting**, not by redistributing user funds.
+- This mechanism is intended as a **monetary policy lever**, not a lending pool.
+
+> 💡 There is no peer-to-peer or interbank lending functionality in the protocol. Any such arrangements must be implemented entirely at the application layer.
 
 ### 3. Loans from the Federal Reserve
 - The Fed may lend tokens against acceptable collateral.
@@ -62,7 +65,7 @@ Banks must hold enough on-chain tokens to meet their real settlement obligations
 The Fed remains lender of last resort, but must operate under transparent and rule-bound conditions:
 - Cannot mint arbitrarily
 - Must receive collateral or assets in exchange
-- May directly inject tokens into reserves or staking pools to relieve liquidity stress
+- May directly inject tokens into reserves or participate in staking mechanisms under monetary authority rules
 
 ---
 
@@ -70,11 +73,11 @@ The Fed remains lender of last resort, but must operate under transparent and ru
 
 In the absence of synthetic money creation, banks evolve toward true financial intermediation:
 
-| Function | Explanation |
-|----------|-------------|
-| **Credit Risk** | Still taken on loans, but defaults reduce real reserves |
-| **Liquidity Risk** | Must hold enough real tokens to meet withdrawals |
-| **Yield Services** | Optional staking or portfolio products generate non-lending revenue |
+| Function         | Explanation                                                  |
+|------------------|--------------------------------------------------------------|
+| **Credit Risk**   | Still taken on loans, but defaults reduce real reserves      |
+| **Liquidity Risk**| Must hold enough real tokens to meet withdrawals             |
+| **Yield Services**| Optional staking or portfolio products generate non-lending revenue |
 
 ---
 
@@ -93,33 +96,50 @@ These services are off-chain and optional. The protocol enforces no delegation, 
 
 ---
 
-## VII. 🔄 Long-Term User Transition
+## VII. 👤 Transition Toward Self-Custody
 
 Over time, users may:
 - Shift from bank-led custodial interfaces to **self-custodied wallets**
-- Directly **stake** tokens via protocol
+- Directly **stake** tokens via protocol, if offered by token authorities
 - Opt into third-party financial services that interface with protocol APIs
 
 This gradual transition preserves continuity while aligning incentives toward monetary realism.
 
 ---
 
-## VIII. 🤝 Interbank Liquidity Design
+## VIII. 🏧 ATMs and QR-Cash in a Tokenized System
 
-### 1. Staking-Based Liquidity Pool
-- Banks and large holders may stake surplus USD
-- Staked pool provides short-term access for other institutions
-- Yield is paid in minted tokens by the Fed or pool operator
-- Unstaking delay protects against run dynamics
+In the legacy system, ATMs serve as custodial endpoints for withdrawing physical cash from bank accounts, often enforcing withdrawal limits or delays during periods of financial stress. They are a key tool for **capital control** in the traditional model.
 
-### 2. Interbank Lending (Off-Chain)
-- All interbank loans are private agreements
-- Protocol does not support lending logic or collateral enforcement
-- Institutions manage counterparty risk via off-chain contracts
+In a tokenized settlement architecture, **ATMs continue to exist**, but their role fundamentally changes. They become **access points for tamper-evident QR-cash**, which represents bearer tokens issued by the Treasury and tied to wallet-based balances.
+
+### 🏦 Operated by Banks or Private Networks
+
+ATMs may be operated by:
+- **Banks**, integrated with their internal systems of synthetic dollars, reconciling withdrawals and deposits through existing customer accounts
+- **Independent entities**, whose business model is to:
+  - Purchase QR-cash from the U.S. Treasury or a designated token distributor
+  - Load and distribute QR-cash via physical ATM terminals
+  - Collect fees per withdrawal or issuance
+
+Independent operators do **not** need to interface with any bank systems — they communicate directly with the settlement layer to verify and dispense valid QR-cash. Some may choose to integrate with institutional systems for user convenience, but it is not required.
+
+> ⚠️ Independent operators may impose withdrawal limits — not as systemic capital controls, but to protect inventory from machine draining or sabotage.
+
+### 🧯 Capital Control Workarounds
+
+Unlike legacy ATMs:
+- There are **no protocol-level withdrawal restrictions**
+- QR-cash is **fully portable and peer-transferable**
+- Wallet-based redemptions ensure **unmediated access to funds**
+
+Governments and banks may still apply limits within their own services, but the protocol guarantees liquidity — and QR-cash provides an escape hatch from institutional constraints.
+
+In this model, ATMs are no longer tools of monetary enforcement. They are **optional service nodes**, making digital dollars physically accessible, whether operated by a global bank or a convenience store chain. The power shifts from the institution to the protocol — and from permission to access.
 
 ---
 
-## IX. ✅ Summary
+## IX. 🧾 Summary of Transitional Model
 
 This model allows:
 - Traditional bank-led lending to continue via synthetic balances
@@ -128,5 +148,7 @@ This model allows:
 - The Fed to operate transparently under strict constraints
 
 All credit behavior, portfolio management, and customer service is moved to the **application layer**. The protocol layer remains strict, minimal, and auditable — ensuring monetary clarity during the transition.
+
+> 🔮 In the long term, some banks may exit custodial services entirely, evolving into digital financial service providers that interact with wallet holders via competitive API-driven offerings.
 
 ---

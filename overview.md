@@ -52,7 +52,7 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ## III. 🏦 Banking & Transitional Design
 
-See [Transitional Lending Model](/digital-usd/transitional-lending-model)
+See [Transitional Banking](/digital-usd/transitional-banking)
 
 ---
 
