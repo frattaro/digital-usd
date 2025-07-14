@@ -110,6 +110,35 @@ This document outlines the technical, operational, and institutional resources r
 
 ---
 
+## 10. Regulatory Oversight
+
+Token authorities will likely be subject to legal and regulatory scrutiny depending on their structure, purpose, and user base. In particular:
+
+- The **U.S. Securities and Exchange Commission (SEC)** is expected to regulate many non-government token authorities, especially if:
+  - Tokens are offered to the public as investments
+  - Tokens claim to be backed by real-world assets
+  - There is any expectation of yield or appreciation
+
+Compliance may require:
+- Registration as a securities issuer
+- Public disclosure of backing assets, governance, and issuance schedules
+- Ongoing financial reporting and audits
+
+> All of this happens **off-chain**. The protocol itself does not enforce securities law.
+
+### Federal Reserve Exception
+
+The **Federal Reserve**, as a sovereign entity and issuer of USD tokens, is **not regulated by the SEC**. Its operations are governed by:
+- The **Federal Reserve Act**
+- Oversight from Congress and the U.S. Treasury
+- Its legal mandate as central bank
+
+This distinction allows the Fed to act as a token authority without SEC registration or reporting requirements.
+
+Only **non-sovereign** token authorities (corporates, consortiums, startups, etc.) fall under securities law compliance.
+
+---
+
 ## Optional but Recommended
 - Academic and technical advisory group
 - Disaster recovery and monetary continuity simulations

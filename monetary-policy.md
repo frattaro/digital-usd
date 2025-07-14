@@ -20,6 +20,25 @@ Examples include:
 
 Token authorities **do not operate validator nodes**, **do not control swap routing**, and **do not participate in consensus**. Their role is limited to managing the monetary characteristics of their token.
 
+## Unbacked Tokens and Fixed Supply Models
+
+Token authorities are not required to back their tokens with external assets (e.g. treasuries, commodities, or fiat). Instead, a token may be issued with a **declared, immutable issuance policy** that serves as its credibility foundation.
+
+A valid monetary policy may include:
+- A **hard cap on supply** (e.g. 21 million tokens)
+- A **fixed decimal precision**
+- **No minting or burning** beyond initial issuance
+- Transparent rules around wallet allocation or launch phases
+
+These rules must be:
+- Declared at the time of token creation
+- Publicly accessible via attestation metadata
+- Enforced through legal means, such as SEC filings (if applicable)
+
+> Example: A token modeled after Bitcoin, with a hard 21 million supply cap and no collateral backing, may still be trusted and adopted if its rules are enforced and transparent.
+
+Such tokens compete on **credibility and governance**, not backing alone.
+
 ---
 
 ## II.  Protocol-Level Permissions
