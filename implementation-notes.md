@@ -125,9 +125,11 @@ See (monetary policy)[/monetary-policy] for more info
 ## VIII. 🛡️ Protocol Governance
 
 ### 1. Node Operators
-- Operated by a trusted consortium (e.g., Federal Reserve Primary Dealers as an initial set)
-- Fixed set of validators with quorum-based governance (e.g., 13 of 21 signatures required)
-- Validators confirm transactions, verify attestations, and enforce protocol logic
+Operated by a trusted consortium of regulated infrastructure providers
+
+- Initial operators may include payment processors, core banking vendors, tax platforms, and compliance service firms. Banks may run into BHCA issues if attempting to run nodes.
+- Must meet strict operational, security, and availability requirements
+- Validator set is fixed, with quorum-based upgrade governance (e.g., 13 of 21 signatures)
 
 ### 2. Protocol Roles
 
