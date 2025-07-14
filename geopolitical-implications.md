@@ -3,7 +3,7 @@ title: Potential Geopolitical Implications
 nav_order: 9
 ---
 
-> ⚠️ **Important Note:**  
+> ️ **Important Note:**  
 > The geopolitical implications outlined below are not sudden or explosive. If they occur, they will emerge gradually, giving institutions, regulators, and governments ample time to observe, respond, and adapt. This document outlines potential shifts over years, not days.
 >
 > Participation in the system is gated by several layers of verification and access:
@@ -14,13 +14,13 @@ nav_order: 9
 >
 > The protocol does not bypass sovereignty through force; it simply offers an alternative based on credibility and trust.
 
-# 🌐 Potential Geopolitical Implications
+#  Potential Geopolitical Implications
 
 The introduction of a compliant, programmable USD settlement layer—backed by tokenized reserves, governed by verifiable attestations, and operated by a trusted validator set—has profound implications not only for banking infrastructure, but for global geopolitics. By disintermediating legacy payment rails and embedding economic principles directly in protocol logic, this system alters the landscape of monetary trust, capital control, and currency competition.
 
 ---
 
-## 🧭 1. First-to-Implement Advantage
+##  1. First-to-Implement Advantage
 
 The first nation to implement this protocol effectively exports its monetary system as programmable infrastructure. That settlement layer becomes:
 
@@ -32,7 +32,7 @@ Because of its global accessibility, performance, and auditability, the protocol
 
 ---
 
-## 🔓 2. Undermining Capital Controls
+##  2. Undermining Capital Controls
 
 Most developing economies maintain their currency pegs and monetary policy autonomy via bank-level controls: correspondent account access, SWIFT messaging permissions, and informal capital gates.
 
@@ -47,7 +47,7 @@ This creates an irreversible pressure valve on peg maintenance and centralized c
 
 ---
 
-## 📉 3. Destabilizing Fragile Pegs
+##  3. Destabilizing Fragile Pegs
 
 In the current system, pegs are enforced through:
 - FX interventions
@@ -63,7 +63,7 @@ Countries that rely on inflated balance sheets or political confidence games wil
 
 ---
 
-## 🧠 4. Loss of Monetary Sovereignty
+##  4. Loss of Monetary Sovereignty
 
 For weaker currencies, the domestic monetary system becomes optional:
 - Imports can be priced in USD and settled via protocol
@@ -74,7 +74,7 @@ Central banks lose the ability to inflate quietly, redirect lending through mora
 
 ---
 
-## 🇨🇳 5. Misalignment with Authoritarian Monetary Regimes
+##  5. Misalignment with Authoritarian Monetary Regimes
 
 China’s monetary model relies on:
 - Centralized control of FX reserves
@@ -100,7 +100,7 @@ Thus, participation is technically possible—but controlling it is politically 
 
 ---
 
-## 🌍 6. Realignment of Global Currency Trust
+##  6. Realignment of Global Currency Trust
 
 The protocol does not require nations to use USD—but it does force them to compete on monetary credibility:
 - Any issuer may create a token and attempt to build trust through policy and participation
@@ -111,7 +111,7 @@ The protocol does not require nations to use USD—but it does force them to com
 
 ---
 
-## ⚠️ 7. Strategic Risk and First-Mover Responsibility
+## ️ 7. Strategic Risk and First-Mover Responsibility
 
 Because this system exports monetary logic, the first mover bears enormous responsibility:
 - To preserve compliance, privacy, and legal boundaries
@@ -122,7 +122,7 @@ If done right, it could lay the foundation for a new era of interoperable moneta
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 The deployment of a protocol-level settlement layer for USD does more than modernize Fedwire and ACH. It reshapes the foundation of international finance by making trust measurable, governance contestable, and control opt-in.
 

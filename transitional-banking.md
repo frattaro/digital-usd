@@ -3,13 +3,13 @@ title: Transitional Banking
 nav_order: 4
 ---
 
-# 🏦 Transitional Banking Model in the Digital USD System
+#  Transitional Banking Model in the Digital USD System
 
 This document outlines how traditional bank lending, deposit capture, and custodial services can persist during the transition to a token-based settlement system. It preserves user-friendly interfaces and synthetic balances while enforcing strict monetary discipline at the protocol level.
 
 ---
 
-## I. 🧮 Overview
+## I.  Overview
 
 In the Digital USD system:
 - All **real value** is represented by tokenized USD issued by the Federal Reserve.
@@ -20,7 +20,7 @@ Custodial banking becomes an **off-chain abstraction**: users deposit tokens int
 
 ---
 
-## II. 🏗️ How Synthetic Loans Work
+## II. ️ How Synthetic Loans Work
 
 1. **Loan Origination**
    - Bank creates a synthetic balance in the borrower’s custodial account.
@@ -37,7 +37,7 @@ Custodial banking becomes an **off-chain abstraction**: users deposit tokens int
 
 ---
 
-## III. 💧 Sources of Reserves
+## III.  Sources of Reserves
 
 Banks must hold enough on-chain tokens to meet their real settlement obligations. Reserve sources include:
 
@@ -50,7 +50,7 @@ Banks must hold enough on-chain tokens to meet their real settlement obligations
 - Yield is funded via **controlled minting**, not by redistributing user funds.
 - This mechanism is intended as a **monetary policy lever**, not a lending pool.
 
-> 💡 There is no peer-to-peer or interbank lending functionality in the protocol. Any such arrangements must be implemented entirely at the application layer.
+>  There is no peer-to-peer or interbank lending functionality in the protocol. Any such arrangements must be implemented entirely at the application layer.
 
 ### 3. Loans from the Federal Reserve
 - The Fed may lend tokens against acceptable collateral.
@@ -60,7 +60,7 @@ Banks must hold enough on-chain tokens to meet their real settlement obligations
 
 ---
 
-## IV. 🏛️ Role of the Federal Reserve
+## IV. ️ Role of the Federal Reserve
 
 The Fed remains lender of last resort, but must operate under transparent and rule-bound conditions:
 - Cannot mint arbitrarily
@@ -69,7 +69,7 @@ The Fed remains lender of last resort, but must operate under transparent and ru
 
 ---
 
-## V. 📊 Risk & Profit Structure
+## V.  Risk & Profit Structure
 
 In the absence of synthetic money creation, banks evolve toward true financial intermediation:
 
@@ -81,7 +81,7 @@ In the absence of synthetic money creation, banks evolve toward true financial i
 
 ---
 
-## VI. 💼 Custodial Portfolio Management
+## VI.  Custodial Portfolio Management
 
 To retain deposits and add user value, banks may offer **wallet portfolio management** services:
 
@@ -96,7 +96,7 @@ These services are off-chain and optional. The protocol enforces no delegation, 
 
 ---
 
-## VII. 👤 Transition Toward Self-Custody
+## VII.  Transition Toward Self-Custody
 
 Over time, users may:
 - Shift from bank-led custodial interfaces to **self-custodied wallets**
@@ -107,13 +107,13 @@ This gradual transition preserves continuity while aligning incentives toward mo
 
 ---
 
-## VIII. 🏧 ATMs and QR-Cash in a Tokenized System
+## VIII.  ATMs and QR-Cash in a Tokenized System
 
 In the legacy system, ATMs serve as custodial endpoints for withdrawing physical cash from bank accounts, often enforcing withdrawal limits or delays during periods of financial stress. They are a key tool for **capital control** in the traditional model.
 
 In a tokenized settlement architecture, **ATMs continue to exist**, but their role fundamentally changes. They become **access points for tamper-evident QR-cash**, which represents bearer tokens issued by the Treasury and tied to wallet-based balances.
 
-### 🏦 Operated by Banks or Private Networks
+###  Operated by Banks or Private Networks
 
 ATMs may be operated by:
 - **Banks**, integrated with their internal systems of synthetic dollars, reconciling withdrawals and deposits through existing customer accounts
@@ -124,9 +124,9 @@ ATMs may be operated by:
 
 Independent operators do **not** need to interface with any bank systems — they communicate directly with the settlement layer to verify and dispense valid QR-cash. Some may choose to integrate with institutional systems for user convenience, but it is not required.
 
-> ⚠️ Independent operators may impose withdrawal limits — not as systemic capital controls, but to protect inventory from machine draining or sabotage.
+> ️ Independent operators may impose withdrawal limits — not as systemic capital controls, but to protect inventory from machine draining or sabotage.
 
-### 🧯 Capital Control Workarounds
+###  Capital Control Workarounds
 
 Unlike legacy ATMs:
 - There are **no protocol-level withdrawal restrictions**
@@ -139,7 +139,7 @@ In this model, ATMs are no longer tools of monetary enforcement. They are **opti
 
 ---
 
-## IX. 🧾 Summary of Transitional Model
+## IX.  Summary of Transitional Model
 
 This model allows:
 - Traditional bank-led lending to continue via synthetic balances
@@ -149,6 +149,6 @@ This model allows:
 
 All credit behavior, portfolio management, and customer service is moved to the **application layer**. The protocol layer remains strict, minimal, and auditable — ensuring monetary clarity during the transition.
 
-> 🔮 In the long term, some banks may exit custodial services entirely, evolving into digital financial service providers that interact with wallet holders via competitive API-driven offerings.
+>  In the long term, some banks may exit custodial services entirely, evolving into digital financial service providers that interact with wallet holders via competitive API-driven offerings.
 
 ---

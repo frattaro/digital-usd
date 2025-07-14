@@ -3,7 +3,7 @@ title: Implementation Notes
 nav_order: 6
 ---
 
-# 🛠️ Tokenized Settlement System – Implementation Notes
+# ️ Tokenized Settlement System – Implementation Notes
 
 This document provides implementation-level guidance for deploying the Direct Settlement Protocol on the Heiro ledger. It outlines how to configure a high-performance distributed ledger for real-value token settlement, staking-based monetary policy, and interoperable multi-token operation.
 
@@ -11,7 +11,7 @@ While the first production token is expected to be a digital USD issued by the F
 
 ---
 
-## I. 🎯 Project Scope
+## I.  Project Scope
 
 - Replace legacy settlement networks (e.g., Fedwire, ACH) with a programmable, auditable ledger system
 - Launch with a **single token** issued by a founding token authority (e.g., the Federal Reserve issuing digital USD)
@@ -26,7 +26,7 @@ While the first production token is expected to be a digital USD issued by the F
 
 ---
 
-## II. 🔧 Bootstrapping the Ledger and Token Authority
+## II.  Bootstrapping the Ledger and Token Authority
 
 ### 1. Fork Heiro Ledger Token Service
 - Clone: [https://github.com/hiero-ledger/hiero-consensus-node](https://github.com/hiero-ledger/hiero-consensus-node)
@@ -71,7 +71,7 @@ Additional tokens may be created using the same two-step process by other author
 
 ---
 
-## III. 🔐 Wallets and Attestations
+## III.  Wallets and Attestations
 
 ### 1. Wallet Creation Flow
 - User creates keypair via app
@@ -92,7 +92,7 @@ Additional tokens may be created using the same two-step process by other author
 
 ---
 
-## VI. 🏦 Banking Integration & Cutover
+## VI.  Banking Integration & Cutover
 
 ### 1. Core Banking Providers
 - Fiserv, Jack Henry, Finastra, etc. integrate SDK
@@ -105,7 +105,7 @@ See (monetary policy)[/monetary-policy] for more info
 
 ---
 
-## VII. 📈 Performance and Scalability
+## VII.  Performance and Scalability
 
 ### 1. Expected Load
 - U.S. daily settlement volume ~300M transactions
@@ -122,7 +122,7 @@ See (monetary policy)[/monetary-policy] for more info
 
 ---
 
-## VIII. 🛡️ Protocol Governance
+## VIII. ️ Protocol Governance
 
 ### 1. Node Operators
 Operated by a trusted consortium of regulated infrastructure providers
@@ -149,7 +149,7 @@ Operated by a trusted consortium of regulated infrastructure providers
 
 ---
 
-## IX. 📌 Deployment Plan (Phased)
+## IX.  Deployment Plan (Phased)
 
 ### Phase 1 – Testnet
 - Internal testnet with Treasury + SDK
@@ -173,7 +173,7 @@ Operated by a trusted consortium of regulated infrastructure providers
 
 ---
 
-## X. 🧠 Final Notes
+## X.  Final Notes
 
 - MVP is **single-token only** (`USD`)
 - The goal is **neutral infrastructure**: programmable, auditable, and permissioned, but open to competition

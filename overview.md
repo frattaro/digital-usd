@@ -3,7 +3,7 @@ title: Overview
 nav_order: 1
 ---
 
-# 🧭 Digital USD Infrastructure – System Overview
+#  Digital USD Infrastructure – System Overview
 
 This document outlines a replacement settlement infrastructure for the U.S. dollar. It provides a modern, programmable alternative to Fedwire and ACH using KYC-attested wallets and tokenized USD. It introduces staking-based liquidity management, automated compliance, and eventual support for additional currencies — all while preserving compatibility with existing financial institutions and policy.
 
@@ -14,7 +14,7 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ---
 
-## I. 🌐 Core Protocol Architecture
+## I.  Core Protocol Architecture
 
 ### 1. Digital USD as the Base Settlement Layer
 - The Federal Reserve is the sole token authority for digital USD.
@@ -50,13 +50,13 @@ This document outlines a replacement settlement infrastructure for the U.S. doll
 
 ---
 
-## III. 🏦 Banking & Transitional Design
+## III.  Banking & Transitional Design
 
 See [Transitional Banking](/digital-usd/transitional-banking)
 
 ---
 
-## IV. 🪙 Monetary Policy Design
+## IV.  Monetary Policy Design
 
 The system enables each token authority to define its own policy logic. However, Federal Reserve policy receives special handling to support transitional compatibility.
 
@@ -79,7 +79,7 @@ See [monetary policy](/digital-usd/monetary-policy) for more details
 
 ---
 
-## V. 📉 Taxation & Accounting
+## V.  Taxation & Accounting
 
 ### 1. External Tax Handling
 - Tax compliance is **not** enforced by the protocol.
@@ -95,7 +95,7 @@ See [monetary policy](/digital-usd/monetary-policy) for more details
 
 ---
 
-## VI. 🧠 System Design Principles
+## VI.  System Design Principles
 
 ### 1. Protocol-Level Neutrality
 - Core protocol handles:
@@ -115,7 +115,7 @@ See [monetary policy](/digital-usd/monetary-policy) for more details
 
 ---
 
-## VII. 🏛️ Multi-Currency Expansion
+## VII. ️ Multi-Currency Expansion
 
 This protocol is designed to support multiple currencies beyond digital USD, including both corporate and sovereign tokens. Each token is issued by a token authority responsible for supply and policy, while swap functionality and liquidity are provided by independent, fee-incentivized nodes.
 
@@ -133,7 +133,7 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 - Support for multi-token expansion; see [Currency Swaps and Liquidity](/digital-usd/swap-liquidity) for mechanics.
 - Token authorities may seed liquidity pools with reserves to bootstrap adoption.
 
-> 🔄 Note: Swap liquidity is **not provided by staking**.
+>  Note: Swap liquidity is **not provided by staking**.
 >
 > - **Staking**: Locks tokens to slow monetary velocity and earn yield set by token authorities.
 > - **Liquidity Provisioning**: Deposits tokens into swap pools to enable trades and earn variable swap fees.
@@ -151,7 +151,7 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 
 ---
 
-## IX. 🛠️ Implementation Notes
+## IX. ️ Implementation Notes
 
 A complete implementation of this protocol requires:
 

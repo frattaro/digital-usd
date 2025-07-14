@@ -3,13 +3,13 @@ title: SDK Specification
 nav_order: 7
 ---
 
-# 💻 Digital USD SDK Specification
+#  Digital USD SDK Specification
 
 This SDK provides programmatic access to the core functionality of the Direct Settlement Protocol
 
 ---
 
-## 🔧 Core Methods
+##  Core Methods
 
 | Method | Description |
 |--------|-------------|
@@ -27,7 +27,7 @@ This SDK provides programmatic access to the core functionality of the Direct Se
 
 ---
 
-## 💡 Notes on Staking
+##  Notes on Staking
 
 - Staking is **not tied to nodes**; it is a **protocol-wide liquidity signal**.
 - Tokens staked are used to provide liquidity for swaps and **earn protocol-defined fees**.
@@ -38,7 +38,7 @@ This SDK provides programmatic access to the core functionality of the Direct Se
 
 ---
 
-## 🔐 Security and Enforcement
+##  Security and Enforcement
 
 All methods automatically enforce:
 - Attestation validity (`attestor_id` whitelisted)

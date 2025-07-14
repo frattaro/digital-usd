@@ -3,7 +3,7 @@ title: White Paper
 nav_order: 0
 ---
 
-# 🏛️ White Paper: A New Settlement Layer for the Digital Age
+# ️ White Paper: A New Settlement Layer for the Digital Age
 
 **Replacing Fedwire and ACH — without breaking the economy.**
 
@@ -57,21 +57,21 @@ This project aims to fix that.
 
 ## Core Components
 
-### ✅ Wallets and Attestations
+###  Wallets and Attestations
 
 Wallets must include attestation metadata signed by trusted KYC providers (supplied via the U.S. Treasury). Wallets created without valid attestations are not permitted to receive or send tokens.
 
 - Attestation schema includes minimally required pseudo-anonymous information for validation.
 - No user can create a wallet without a valid attestation from a U.S. Treasury approved source.
 
-### ✅ Allowlist and Denylist
+###  Allowlist and Denylist
 
 The U.S. Treasury has full authority over the attestor allowlist the the transaction denylist. To enforce compliance at the protocol level during wallet attestation and transaction time, this requires the Treasury to:
 - regulate attestors,
 - freeze wallets according to justice system requests supported by a court order, and
 - administration sanctions, being on individuals or country-pairs.
 
-### ✅ Liquidity and Monetary Policy
+###  Liquidity and Monetary Policy
 
 While banks may still issue synthetic dollars within their own internal ledgers, **all inter-institutional settlement requires real tokens, on-chain**.
 
@@ -88,7 +88,7 @@ Token authorities — such as the Federal Reserve — implement monetary policy 
 
 This model enables **transparent, rules-based monetary policy** without reliance on opaque leverage or synthetic money creation outside authorized minting.
 
-### ✅ Paper Cash (QR Notes)
+###  Paper Cash (QR Notes)
 
 The Treasury may issue printed notes with tamper-evident QR codes:
 - Each note is a wallet preloaded with a fixed amount.

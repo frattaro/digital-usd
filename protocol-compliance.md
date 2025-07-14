@@ -3,13 +3,13 @@ title: Protocol Compliance
 nav_order: 2
 ---
 
-# 🛡️ Why Compliance Must Be Protocol-Level
+# ️ Why Compliance Must Be Protocol-Level
 
 This document explains the regulatory burden placed on banks in today's financial system, the risks introduced by decentralization, and why compliance must be embedded directly in the protocol for a legally safe, scalable system.
 
 ---
 
-## I. 🏦 Traditional Compliance Burden on Banks
+## I.  Traditional Compliance Burden on Banks
 
 In the legacy ACH/Fedwire systems, **banks** are the primary intermediaries. They are legally responsible for:
 
@@ -23,7 +23,7 @@ The payment networks themselves (e.g. ACH) do **not** enforce compliance directl
 
 ---
 
-## II. 🧍 The New Role of Wallet Holders
+## II.  The New Role of Wallet Holders
 
 In a decentralized monetary system, **wallet holders can act as their own bank**.
 
@@ -35,36 +35,36 @@ That introduces a dangerous shift:
 
 ---
 
-## III. ⚖️ Protocol-Enforced Compliance Is the Only Viable Path
+## III. ️ Protocol-Enforced Compliance Is the Only Viable Path
 
 To restore legal safety for individuals and reduce institutional overhead, the Digital USD protocol enforces:
 
-### ✅ KYC-Attested Wallets
+###  KYC-Attested Wallets
 - Every wallet must include a signed attestation from an approved identity attestor.
 - KYC attestations are permanently attached to wallets.
 - They cannot be revoked, deleted, or purged after issuance.
 
-### ✅ Attestor Whitelisting
+###  Attestor Whitelisting
 - Transfers only succeed if the attestation comes from an approved `attestor_id`.
 - Approved attestor lists are synced hourly from a U.S. Treasury API service.
 
-### ✅ Sanctions Screening
+###  Sanctions Screening
 - The protocol checks each transfer against:
   - `jurisdiction` pair deny lists (from_country → to_country)
   - (`attestor_id`, `attestation_id`) sanctions lists
 - Deny lists are synced hourly from a U.S. Treasury API service.
 
-### ✅ Freeze & Legal Reporting
+###  Freeze & Legal Reporting
 - Wallets can be frozen using a sanctions-style deny list.
 
-### ✅ Immutable Public Ledger
+###  Immutable Public Ledger
 - Enables external audit tooling and compliance monitoring (e.g. SAR triggers) without requiring wallet-holders to self-report.
-- ✅ DOJ and regulatory agencies (e.g. FinCEN) are responsible for monitoring the public ledger for AML patterns, SARs, and CTR thresholds — replacing institutional reporting with direct observation.
+-  DOJ and regulatory agencies (e.g. FinCEN) are responsible for monitoring the public ledger for AML patterns, SARs, and CTR thresholds — replacing institutional reporting with direct observation.
 
 
 ---
 
-## IV. 🧠 Benefits of Protocol-Level Enforcement
+## IV.  Benefits of Protocol-Level Enforcement
 
 | Benefit | Description |
 |--------|-------------|
@@ -75,7 +75,7 @@ To restore legal safety for individuals and reduce institutional overhead, the D
 
 ---
 
-## V. 🔁 Summary
+## V.  Summary
 
 > Without protocol-level compliance, every wallet holder becomes a bank — and every transaction becomes a legal minefield.
 

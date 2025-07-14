@@ -3,7 +3,7 @@ title: Currency Swaps & Liquidity
 nav_order: 8
 ---
 
-# 🔄 Currency Swaps and Liquidity Provisioning
+#  Currency Swaps and Liquidity Provisioning
 
 This document defines how token swaps are performed within the Digital USD system using permissionless liquidity pools. It describes how users provide liquidity, how fees are earned, and how swaps are executed — including optional multi-hop routing.
 
@@ -11,7 +11,7 @@ This functionality is built independently of the Heiro ledger base and does **no
 
 ---
 
-## I. 💱 Purpose
+## I.  Purpose
 
 - Enable on-chain token-to-token swaps (e.g. USD ↔ EUR)
 - Facilitate decentralized price discovery
@@ -22,7 +22,7 @@ Token authorities **do not control or approve** swap behavior. Once tokens are i
 
 ---
 
-## II. 🏗️ Liquidity Pool Structure
+## II. ️ Liquidity Pool Structure
 
 Each swap pair is managed by a **dedicated liquidity pool**, with a canonical system-created wallet. Pools are created dynamically on first use.
 
@@ -38,7 +38,7 @@ provideLiquidity(tokenA, tokenB, amountA, amountB, feeBps)
 - `feeBps` defines the **basis point fee** (e.g., 30 = 0.3%)
 - Optionally, a **flat fee** may also be defined later
 
-> ⚠️ First liquidity provider sets the initial price. This is a known risk.
+> ️ First liquidity provider sets the initial price. This is a known risk.
 
 ### Pool Ownership
 - LPs may receive a proportional share receipt (e.g., LP token or metadata)
@@ -47,7 +47,7 @@ provideLiquidity(tokenA, tokenB, amountA, amountB, feeBps)
 
 ---
 
-## III. 🔁 Swap Execution
+## III.  Swap Execution
 
 ```ts
 swap(tokenIn, tokenOut, amountIn, options?)
@@ -71,7 +71,7 @@ swap(tokenIn, tokenOut, amountIn, options?)
 
 ---
 
-## IV. 🧠 Multi-Hop Routing
+## IV.  Multi-Hop Routing
 
 Multi-hop swaps enable price discovery and **passive liquidity balancing** across pools. For example:
 
@@ -85,7 +85,7 @@ If WMT↔EUR is undersupplied but WMT↔USD and USD↔EUR are healthy, the syste
 
 ---
 
-## V. 🧾 Fee Structure
+## V.  Fee Structure
 
 Liquidity providers earn:
 - **Basis point fee**: A percentage of the input or output amount
@@ -99,7 +99,7 @@ Fees are:
 
 ---
 
-## VI. 🔐 Permissionless Design
+## VI.  Permissionless Design
 
 - Any wallet may create or fund a liquidity pool
 - No allowlists, registrations, or external permissions are required
@@ -109,7 +109,7 @@ This supports decentralized markets, composability, and autonomous token ecosyst
 
 ---
 
-## VII. ⚠️ Risks & Considerations
+## VII. ️ Risks & Considerations
 
 | Risk | Description |
 |------|-------------|
@@ -122,7 +122,7 @@ Advanced pricing mechanisms (e.g., oracles or dynamic curves) are intentionally 
 
 ---
 
-## VIII. ✅ Summary
+## VIII.  Summary
 
 - Currency swaps are powered by **user-funded liquidity pools**
 - Swaps use a **constant product AMM**, with optional flat and variable fees

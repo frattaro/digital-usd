@@ -3,13 +3,13 @@ title: Monetary Policy
 nav_order: 3
 ---
 
-# 🏛️ Token Authority & Monetary Policy Specification
+# ️ Token Authority & Monetary Policy Specification
 
 This document defines the role and powers of a token authority within the ledger and outlines how monetary policy is enacted through staking, yield controls, and token issuance mechanics. Token authorities are responsible for managing the supply, velocity, and monetary behavior of their issued tokens — but have no authority over swap functionality or market-driven price mechanisms.
 
 ---
 
-## I. 🎓 What Is a Token Authority?
+## I.  What Is a Token Authority?
 
 A **token authority** is an entity with the power to issue, burn, and manage a specific digital currency on the ledger.
 
@@ -22,7 +22,7 @@ Token authorities **do not operate validator nodes**, **do not control swap rout
 
 ---
 
-## II. ✅ Protocol-Level Permissions
+## II.  Protocol-Level Permissions
 
 Token authorities have access to a limited set of protocol functions:
 
@@ -35,11 +35,11 @@ Token authorities have access to a limited set of protocol functions:
 | `setMinimumYield(token, rate)` | Establish a floor for staking reward rates |
 | `setCooldownPeriod(token, duration)` | Define the required lock-up time for staked tokens |
 
-> ⚠️ Token authorities **cannot freeze wallets**, **denylist users**, or interfere with transactions. All sanctions enforcement must be routed through the U.S. Treasury and enforced by protocol-wide denylist data.
+> ️ Token authorities **cannot freeze wallets**, **denylist users**, or interfere with transactions. All sanctions enforcement must be routed through the U.S. Treasury and enforced by protocol-wide denylist data.
 
 ---
 
-## III. 💰 Staking as Monetary Policy
+## III.  Staking as Monetary Policy
 
 Staking allows token authorities to influence the **velocity** and **effective supply** of their currency.
 
@@ -56,7 +56,7 @@ Yield paid to stakers is minted according to protocol rules and must respect any
 
 ---
 
-## IV. 🔐 Boundaries and Limitations
+## IV.  Boundaries and Limitations
 
 | Rule | Explanation |
 |------|-------------|
@@ -67,7 +67,7 @@ Yield paid to stakers is minted according to protocol rules and must respect any
 
 ---
 
-## V. 🧠 Design Philosophy
+## V.  Design Philosophy
 
 Token authorities in the ledger act as **monetary stewards**, not market participants. Their role is to:
 
@@ -83,7 +83,7 @@ They do **not** set interest rates in the traditional sense, and they do **not**
 
 ---
 
-## VI. 🧾 Summary
+## VI.  Summary
 
 Token authorities use staking and yield to influence monetary behavior:
 
