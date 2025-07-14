@@ -20,7 +20,7 @@ While the first production token is expected to be a digital USD issued by the F
   - Protocol-enforced compliance
   - Wallet creation with attestation
   - Velocity control via staking
-  - Swap infrastructure for future multi-token expansion
+  - Support for multi-token expansion; see [Currency Swaps and Liquidity](/digital-usd/swap-liquidity) for mechanics.
 - Preserve compatibility with existing financial institutions (e.g., core banking software, Treasury workflows)
 - Serve as a general-purpose foundation for other tokens with custom monetary policies
 

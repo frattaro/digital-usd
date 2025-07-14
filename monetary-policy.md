@@ -5,87 +5,94 @@ nav_order: 3
 
 # 🏛️ Token Authority & Monetary Policy Specification
 
-This document defines the role and powers of a token authority within the Heiro ledger, and outlines how monetary policy is enacted through staking, yield, and token controls. Token authorities are responsible for managing the supply, liquidity, and monetary dynamics of their issued tokens.
+This document defines the role and powers of a token authority within the ledger and outlines how monetary policy is enacted through staking, yield controls, and token issuance mechanics. Token authorities are responsible for managing the supply, velocity, and monetary behavior of their issued tokens — but have no authority over swap functionality or market-driven price mechanisms.
 
 ---
 
 ## I. 🎓 What Is a Token Authority?
 
-A **token authority** is an entity that has the ability to issue, burn, and manage a digital currency on the Heiro ledger.
+A **token authority** is an entity with the power to issue, burn, and manage a specific digital currency on the ledger.
 
-Examples:
+Examples include:
 - The Federal Reserve (USD)
 - The European Central Bank (EUR)
-- Corporate issuers (e.g., Walmart, Apple)
+- Corporations (e.g., Walmart for WMT tokens)
 
-Token authorities do not operate validator nodes or handle consensus. They only manage their issued token.
+Token authorities **do not operate validator nodes**, **do not control swap routing**, and **do not participate in consensus**. Their role is limited to managing the monetary characteristics of their token.
 
 ---
 
 ## II. ✅ Protocol-Level Permissions
 
+Token authorities have access to a limited set of protocol functions:
+
 | Capability | Description |
 |------------|-------------|
-| `mint(token, amount)` | Mint new tokens into the authority’s wallet |
-| `burn(token, amount)` | Burn tokens from the authority’s wallet |
-| `stake(token, amount)` | Lock tokens to support swap liquidity |
-| `unstake(token, amount)` | Begin cooldown and release of staked tokens |
-| `setMinimumYield(token, rate)` | Sets a protocol floor for staking yield |
-| `setCooldownPeriod(token, duration)` | Set how long unstaking requires before funds are released |
-| `setSwapFeeRate(token, rate)` | Sets the baseline protocol swap fee involving this token |
-| `registerSwapPath(tokenA, tokenB)` | Enable or disable default swap routing via this token |
+| `mint(token, amount)` | Mint new tokens into the authority’s own wallet |
+| `burn(token, amount)` | Destroy tokens held by the authority |
+| `stake(token, amount)` | Lock tokens to reduce circulating supply and earn yield |
+| `unstake(token, amount)` | Begin release of previously staked tokens after cooldown period |
+| `setMinimumYield(token, rate)` | Establish a floor for staking reward rates |
+| `setCooldownPeriod(token, duration)` | Define the required lock-up time for staked tokens |
 
-> ⚠️ Authorities **cannot** denylist wallets directly. Legal sanctions require a **court order**, after which the **U.S. Treasury** adds wallet or attestation IDs to the denylist.
+> ⚠️ Token authorities **cannot freeze wallets**, **denylist users**, or interfere with transactions. All sanctions enforcement must be routed through the U.S. Treasury and enforced by protocol-wide denylist data.
 
 ---
 
 ## III. 💰 Staking as Monetary Policy
 
-Token authorities control monetary policy not through interest rates or reserve ratios, but through staking incentives and liquidity provisioning.
+Staking allows token authorities to influence the **velocity** and **effective supply** of their currency.
 
-### How It Works
+Staking does **not** provide swap liquidity, nor is it tied to trading. Instead, it acts as a macroeconomic throttle — encouraging users to hold rather than spend.
 
-| Lever | Description | Economic Effect |
-|-------|-------------|-----------------|
-| `minimum_yield` | Guarantee a baseline return for staking | Higher yield = lower velocity |
-| `cooldown_period` | Lock-up time before funds can be unstaked | Longer period = longer time to respond to liquidity changes |
-| `mint_and_stake()` | Create and lock tokens to inject liquidity | Analogous to QE |
-| `burn_staked()` | Remove staked tokens to reduce liquidity | Analogous to QT |
+| Lever | Description | Effect on Velocity |
+|-------|-------------|---------------------|
+| `minimum_yield` | Minimum guaranteed return for staking | Higher yield = more tokens locked |
+| `cooldown_period` | Delay before staked funds can be withdrawn | Longer delay = reduced responsiveness |
+| `mint_and_stake()` | Authority mints tokens directly into stake | Analogous to QE: increases reserves but locks supply |
+| `burn_staked()` | Removes staked tokens from circulation | Analogous to QT: reduces supply without market shock |
 
-Staking rewards and swap fees become the **functional equivalent** of interest rates and liquidity premiums in the fiat system.
+Yield paid to stakers is minted according to protocol rules and must respect any inflation cap defined at token creation.
 
 ---
 
-## IV. 🧱 Enforcement Boundaries
+## IV. 🔐 Boundaries and Limitations
 
 | Rule | Explanation |
 |------|-------------|
-| No forced transfers | Token authorities cannot move other users' funds |
-| No unilateral denylisting | All denylist entries must be routed through U.S. Treasury upon legal authorization |
-| No synthetic supply | All tokens are backed by explicit minting, no implicit credit or debt instruments |
-| Transparent controls | All authority actions are visible and logged in public ledger events |
+| No control over swaps | Token authorities cannot register pairs, adjust swap fees, or seed pools |
+| No forced transfers | Authorities can only move funds held in their own wallets |
+| No synthetic supply | All tokens are explicitly minted; no fractional reserves or lending built-in |
+| Transparent actions | All token authority actions are logged on-chain with public visibility |
 
 ---
 
-## V. 🔁 Policy Flexibility and Competition
+## V. 🧠 Design Philosophy
 
-Each token authority sets its own policy parameters. This allows:
+Token authorities in the ledger act as **monetary stewards**, not market participants. Their role is to:
 
-- Competing currencies with different velocity/yield tradeoffs
-- Corporate tokens with no staking but high liquidity
-- Central banks to mimic traditional monetary tools without synthetic lending
+- Define supply growth constraints
+- Set basic incentives for saving vs. spending
+- Respond to macroeconomic conditions with predictable, rules-based levers
 
-Market dynamics and swap volumes will naturally pressure token authorities toward more responsible or responsive monetary governance.
+They do **not** set interest rates in the traditional sense, and they do **not** have privileged access to liquidity markets. This design ensures:
+
+- A level playing field across competing currencies
+- Transparent monetary governance
+- Strict separation between policy and price discovery
 
 ---
 
-## VI. 🧠 Summary
+## VI. 🧾 Summary
 
-Token authorities on Heiro ledger use **staking mechanics** to manage:
-- Money velocity
-- Swap liquidity
-- Circulating supply
+Token authorities use staking and yield to influence monetary behavior:
 
-The system removes legacy tools (e.g., Fed Funds Rate) in favor of **direct, programmable policy levers** — all transparent, public, and rules-based.
+- **Stake** tokens to slow velocity
+- **Mint** tokens to increase supply
+- **Burn** tokens to remove excess liquidity
+- **Set yield floors** to incentivize holding
+- **Set cooldowns** to delay liquidity re-entry
+
+These tools form the basis of a **transparent, programmable monetary policy** that can coexist with other currencies in a competitive, rule-bound environment.
 
 ---

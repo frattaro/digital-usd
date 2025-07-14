@@ -3,9 +3,9 @@ title: SDK Specification
 nav_order: 7
 ---
 
-# 💻 Digital USD SDK Specification – Heiro Ledger
+# 💻 Digital USD SDK Specification
 
-This SDK provides programmatic access to the core functionality of the Direct Settlement Protocol on Heiro ledger.
+This SDK provides programmatic access to the core functionality of the Direct Settlement Protocol
 
 ---
 
@@ -22,7 +22,7 @@ This SDK provides programmatic access to the core functionality of the Direct Se
 | `stake(token, amount)` | Locks tokens to provide swap liquidity and earn fees or yield |
 | `unstake(token, amount)` | Begins the unlock process for staked tokens |
 | `getStakingStatus(wallet)` | Returns staked balances and unlock state for a wallet |
-| `swap(tokenA, tokenB, amount)` | Performs a currency swap using staked liquidity from providers |
+| `swap(tokenA, tokenB, amount, options)` | Performs a currency swap using liquidity pools |
 | `getSwapQuote(tokenA, tokenB, amount)` | Returns expected output and fee for a proposed token swap |
 
 ---

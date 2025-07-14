@@ -68,6 +68,7 @@ The system enables each token authority to define its own policy logic. However,
 - Staking provides a mechanism for token velocity control.
 - The authority may mint yield to incentivize or disincentivize token retention or circulation.
 - This replaces interest rates, reserve ratios, and other indirect levers.
+- Staking does not provide liquidity for swaps or lending — it only locks supply.”
 
 ### 3. Fed-Specific Analogues
 - The Fed uses staking rates instead of Fed Funds Rate or IORB.
@@ -126,10 +127,10 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 ### 2. Currency Swap Infrastructure
 
 - Swaps occur through token **liquidity pools**, each backed by real reserves in both tokens.
-- Pools are created by **liquidity providers** who deposit two-token pairs (e.g., WMT/SBX) into a swap contract.
+- Pools are created by **liquidity providers** who deposit two-token pairs (e.g., WMT/SBX) into a swap transaction.
 - Swap fees are distributed to pool providers proportional to usage.
 - There is **no default routing through USD** — direct pairs must exist to support a swap.
-- Swap quotes may fall back to multi-hop routes (e.g., WMT → XYZ → SBX) if liquidity paths exist, but routing is market-driven.
+- Support for multi-token expansion; see [Currency Swaps and Liquidity](/digital-usd/swap-liquidity) for mechanics.
 - Token authorities may seed liquidity pools with reserves to bootstrap adoption.
 
 > 🔄 Note: Swap liquidity is **not provided by staking**.
@@ -137,12 +138,12 @@ This protocol is designed to support multiple currencies beyond digital USD, inc
 > - **Staking**: Locks tokens to slow monetary velocity and earn yield set by token authorities.
 > - **Liquidity Provisioning**: Deposits tokens into swap pools to enable trades and earn variable swap fees.
 >
-> These are separate mechanisms with distinct incentives, cooldown rules, and monetary effects.
+> These are separate mechanisms with distinct incentives, cooldown rules, and monetary effects. All swap liquidity is provided by independent token holders who voluntarily deposit into two-token pools. The protocol does not stake or route user funds.
 
 ### 3. Liquidity Dynamics
 - Only the Fed (as a token authority) can mint USD; all USD liquidity must be staked by holders.
 - Swap failure is possible when no liquidity path exists, which is surfaced to users at transaction time.
-- Stakers are naturally incentivized to support tokens with high demand or frequent swaps.
+- Stakers are incentivized by yield, which is set by token authorities as a tool to throttle monetary velocity.
 
 ### 4. Monetary Competition
 - Swap patterns create natural pressure on token policies.

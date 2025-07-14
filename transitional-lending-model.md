@@ -5,117 +5,128 @@ nav_order: 4
 
 # 🏦 Transitional Lending Model in the Digital USD System
 
-This document outlines how traditional bank lending and synthetic balance behavior can persist during the transition to a token-based settlement system. It preserves the user experience of fractional reserve banking while enforcing strict reserve discipline at the protocol level.
+This document outlines how traditional bank lending, deposit capture, and custodial services can persist during the transition to a token-based settlement system. It preserves user-friendly interfaces and synthetic balances while enforcing strict monetary discipline at the protocol level.
 
 ---
 
 ## I. 🧮 Overview
 
-In the digital USD system:
-- All real value is represented by tokenized USD issued by the Federal Reserve.
-- Banks **cannot create real dollars** — only synthetic entries in their internal systems.
-- Loans are disbursed off-chain as synthetic balances, while **settlement always occurs in real tokens**.
+In the Digital USD system:
+- All **real value** is represented by tokenized USD issued by the Federal Reserve.
+- Banks **cannot create real dollars** — only synthetic balances in their internal systems.
+- The protocol does **not** support delegated wallets. Every on-chain wallet is owned directly by a single entity holding its private key.
 
-This model bridges the old world (fractional reserves) with the new (token-based finality).
+Custodial banking becomes an **off-chain abstraction**: users deposit tokens into a bank's wallet, and the bank reflects that balance in its own internal ledger. All lending, yield distribution, and portfolio services happen within that custodial system.
 
 ---
 
 ## II. 🏗️ How Synthetic Loans Work
 
 1. **Loan Origination**
-   - A bank creates a synthetic balance in the borrower's account on its website or app.
-   - No real USD tokens are transferred yet.
+   - Bank creates a synthetic balance in the borrower’s custodial account.
+   - No on-chain tokens are transferred at this stage.
 
 2. **Loan Usage**
-   - When the borrower spends or withdraws funds:
-     - The bank must settle using **actual digital USD tokens**.
-     - These come from the bank’s reserves, not from freshly minted supply.
+   - When borrower initiates a withdrawal or payment:
+     - Bank must settle using **actual tokenized USD** from its reserves.
+     - Settlement is executed via protocol-level transfer.
 
 3. **Loan Repayment**
-   - Borrower repays in **real USD tokens**.
-   - Bank burns the debt entry off-chain and recovers tokens into its reserves.
+   - Borrower repays in **real tokens**.
+   - Bank reduces the synthetic debt entry off-chain and absorbs tokens back into reserves.
 
 ---
 
 ## III. 💧 Sources of Reserves
 
-Banks must maintain enough token reserves to meet outflows. Reserve sources include:
+Banks must hold enough on-chain tokens to meet their real settlement obligations. Reserve sources include:
 
 ### 1. Customer Deposits
-- Individuals and institutions may deposit real USD tokens into bank-managed wallets.
-- Banks may offer yield-bearing accounts to attract deposits.
+- Users may deposit digital USD into bank-owned wallets.
+- Once deposited, custody is transferred — users interact with a **synthetic balance**.
 
 ### 2. Staking-Based Liquidity Pool
-- Banks may borrow short-term liquidity from a shared staked pool.
-- Pool participants earn swap and lending fees.
-- **Unstaking delay** (e.g., 3 days) protects systemic liquidity.
+- Banks may borrow from a shared liquidity pool backed by staked tokens.
+- Participants earn yield; unstaking delays prevent withdrawal shocks.
 
 ### 3. Loans from the Federal Reserve
-- The Fed may lend digital USD tokens against collateral.
-- It cannot mint freely — token issuance must follow existing law:
-  - Buying assets via open market operations
-  - Purchasing bonds from the Treasury
+- The Fed may lend tokens against acceptable collateral.
+- Token minting must follow existing legal constraints:
+  - Purchase of Treasury bonds
+  - Collateralized lending facilities
 
 ---
 
-## IV. ⚖️ Role of the Federal Reserve
+## IV. 🏛️ Role of the Federal Reserve
 
-The Fed continues to serve as lender of last resort — but:
-- It must acquire assets (or receive Treasury bonds) to legally mint new tokens.
-- It may inject liquidity into the staking pool or directly loan to banks.
-- All loans are explicitly tracked, collateralized, and repayable in tokens.
-
-This limits arbitrary expansion while allowing flexible crisis response.
+The Fed remains lender of last resort, but must operate under transparent and rule-bound conditions:
+- Cannot mint arbitrarily
+- Must receive collateral or assets in exchange
+- May directly inject tokens into reserves or staking pools to relieve liquidity stress
 
 ---
 
 ## V. 📊 Risk & Profit Structure
 
-Banks no longer profit by conjuring synthetic dollars ex nihilo. Instead, they:
-- Accept **credit risk** on borrowers
-- Accept **liquidity risk** on reserve sufficiency
-- Earn spread between:
-  - Lending rate to customers
-  - Cost of acquiring reserves (deposits, Fed loans, staking pool interest)
+In the absence of synthetic money creation, banks evolve toward true financial intermediation:
 
-Banks become true financial intermediaries — not creators of money.
-
----
-
-## VI. 🔄 Long-Term Transition Path
-
-- In early stages, most users will still keep funds in banks.
-- Over time, users may shift to holding wallets directly (e.g., direct deposit to personal KYC wallet).
-- As this happens:
-  - Bank reserve pressure increases
-  - Lending must be backed by real liquidity
-
-The system naturally transitions to discipline without shock.
+| Function | Explanation |
+|----------|-------------|
+| **Credit Risk** | Still taken on loans, but defaults reduce real reserves |
+| **Liquidity Risk** | Must hold enough real tokens to meet withdrawals |
+| **Yield Services** | Optional staking or portfolio products generate non-lending revenue |
 
 ---
 
-## VII. ✅ Summary
+## VI. 💼 Custodial Portfolio Management
+
+To retain deposits and add user value, banks may offer **wallet portfolio management** services:
+
+- Users deposit real tokens into a custodial account
+- Bank offers:
+  - Currency diversification
+  - Yield-seeking strategies
+  - Rebalancing and staking
+- Bank may operate as a **fiduciary** or traditional custodian
+
+These services are off-chain and optional. The protocol enforces no delegation, and only one entity may own any given wallet.
+
+---
+
+## VII. 🔄 Long-Term User Transition
+
+Over time, users may:
+- Shift from bank-led custodial interfaces to **self-custodied wallets**
+- Directly **stake** tokens via protocol
+- Opt into third-party financial services that interface with protocol APIs
+
+This gradual transition preserves continuity while aligning incentives toward monetary realism.
+
+---
+
+## VIII. 🤝 Interbank Liquidity Design
+
+### 1. Staking-Based Liquidity Pool
+- Banks and large holders may stake surplus USD
+- Staked pool provides short-term access for other institutions
+- Yield is paid in minted tokens by the Fed or pool operator
+- Unstaking delay protects against run dynamics
+
+### 2. Interbank Lending (Off-Chain)
+- All interbank loans are private agreements
+- Protocol does not support lending logic or collateral enforcement
+- Institutions manage counterparty risk via off-chain contracts
+
+---
+
+## IX. ✅ Summary
 
 This model allows:
-- Continuation of familiar bank-led lending
-- User-friendly synthetic balances
-- Real-value discipline at the protocol level
-- Fed backstopping via legal asset exchange
+- Traditional bank-led lending to continue via synthetic balances
+- Custodial portfolio services to emerge without protocol changes
+- Real-value enforcement through token-based settlement
+- The Fed to operate transparently under strict constraints
 
-All lending is off-chain, auditable, and reliant on actual reserves — preserving flexibility while enforcing monetary realism.
+All credit behavior, portfolio management, and customer service is moved to the **application layer**. The protocol layer remains strict, minimal, and auditable — ensuring monetary clarity during the transition.
 
 ---
-
-## VIII. 🏦 Interbank Liquidity Design
-
-### 1. Staking-Based Interbank Liquidity
-- Banks and large holders may stake surplus USD tokens.
-- Staked liquidity is used by other institutions to fulfill short-term needs (e.g. withdrawal pressure).
-- The protocol mints yield as compensation.
-- The Fed sets the minimum yield rate to throttle liquidity velocity.
-- Replaces Fed Funds Rate and Interest on Reserve Balances (IORB) as transitional mechanisms.
-
-### 2. Interbank Lending Remains Off-Chain
-- Interbank loans are managed through off-chain agreements between institutions.
-- The protocol does not include loan execution, enforcement, or collateral logic.
-- Lending behavior and risk management are left to the application layer.
