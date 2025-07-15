@@ -115,3 +115,35 @@ Token authorities use staking and yield to influence monetary behavior:
 These tools form the basis of a **transparent, programmable monetary policy** that can coexist with other currencies in a competitive, rule-bound environment.
 
 ---
+
+## VII. Multi-Currency Authorities (bonus!)
+
+### Central Banks with Multiple Tokens
+
+In the settlement system, token issuance is not restricted to one currency per authority. A single token authority — such as the Federal Reserve or a regional central bank — may issue multiple distinct tokens, each governed by its own monetary policy, mint/burn rules, and operational constraints.
+
+This departs from the traditional model where central banks are monopoly issuers of a single national currency. Instead, the protocol supports a modular structure in which:
+
+- Each token is a standalone unit of account and settlement.
+- Token parameters are declared and enforced at issuance.
+- Market participants determine which tokens to use based on trust, liquidity, and policy quality.
+
+Examples of multi-token issuance by a single authority might include:
+
+- A **core USD token**.
+- A **gold-pegged token** for reserve diversification.
+- An **experimental token** with NGDP-targeted mint/burn logic.
+- An **SDR clone token** backed by other token holdings.
+
+### Implications
+
+This architecture enables:
+
+- Central banks to **segment monetary roles** without entangling them.
+- Interoperability between currencies **without compromising policy autonomy**.
+- Competitive evolution of monetary instruments, even within a single issuing authority.
+- The potential to treat currency **as a portfolio**, not a monopoly.
+
+In this system, credibility, governance, and transparency — not legal monopoly — determine adoption.
+
+---
