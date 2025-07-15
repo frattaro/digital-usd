@@ -127,9 +127,10 @@ See (monetary policy)[/monetary-policy] for more info
 ### 1. Node Operators
 Operated by a trusted consortium of regulated infrastructure providers
 
+- Validator selection is initially coordinated by a founding council using a quorum-based model adapted from Hedera’s governance architecture. Validators must meet operational, regulatory, and geopolitical neutrality standards. Over time, onboarding and rotation rules may be published to support transparency and resilience.
 - Initial operators may include payment processors, core banking vendors, tax platforms, and compliance service firms. Banks may run into BHCA issues if attempting to run nodes.
 - Must meet strict operational, security, and availability requirements
-- Validator set is fixed, with quorum-based upgrade governance (e.g., 13 of 21 signatures)
+- Validator set is fixed, with quorum-based upgrade governance
 
 ### 2. Protocol Roles
 
