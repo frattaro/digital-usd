@@ -139,6 +139,35 @@ If a note has been opened, it’s void. If the wallet is drained, it’s empty. 
 
 ---
 
+## Q10: Does this system eliminate the business cycle?
+
+### Concern:
+Without centralized interest rate policy and credit stimulation tools, how will the economy handle recessions? Won’t the system be more volatile without the Fed’s ability to intervene?
+
+### Response:
+This system doesn’t eliminate the business cycle — it **restructures it**.
+
+Most of the volatility in modern economies stems from **credit distortions**, **settlement delays**, and **policy missteps** amplified by poor visibility. By contrast, this protocol provides:
+
+- Real-time, auditable settlement  
+- Transparent token issuance  
+- No support for synthetic money at the protocol layer  
+- Voluntary currency adoption  
+
+Banks and custodial providers may still issue synthetic balances off-chain — subject to regulation — but the **core settlement layer is grounded in fully reserved, attested tokens**. This limits leverage at the foundation of the system.
+
+Because the system does not attempt to stimulate or restrain the economy via interest rates or bond markets, it avoids creating artificial booms or busts. Instead, economic corrections become **faster, smaller, and self-correcting**. Currency holders can **exit bad monetary regimes** without requiring political approval or coordinated bailouts. The business cycle still exists — but without opaque leverage and artificial distortions, it behaves more like **natural market adaptation** than crisis and recovery.
+
+In this architecture:
+- **Booms are constrained** by the requirement to fund reserves  
+- **Bubbles are self-puncturing** as users flee bad currencies  
+- **Recessions become rebalancing events**, not panics  
+- **Policy credibility becomes competitive** — not monopolistic
+
+This is not monetary nihilism — it's **monetary realism**, built on better pipes and better data.
+
+---
+
 ##  Summary
 
 This system is:
