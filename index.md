@@ -5,9 +5,77 @@ nav_order: 0
 
 # ️ White Paper: A New Settlement Layer for the Digital Age
 
-**Replacing Fedwire and ACH — without breaking the economy.**
+## Executive Summary
 
->This project outlines a protocol-level replacement for Fedwire and ACH, using KYC-attested wallets, tokenized reserves, and programmable compliance — all without requiring new laws or speculative crypto infrastructure. It is designed to be legally safe, technically feasible, and operationally neutral, while providing a path toward modern, accountable monetary infrastructure.
+This protocol replaces legacy financial infrastructure with a decentralized, compliant, and programmable alternative — enabling real-time settlement, regulatory certainty, and currency competition at the protocol level.
+
+### 1. Replace Fedwire and ACH
+
+Outdated banking networks (Fedwire, ACH) are replaced with a decentralized settlement system capable of handling high-throughput, real-time transfers. This forms the new foundational "plumbing" of the financial system.
+
+### 2. Protocol-Level Compliance
+
+Since anyone can access the system, compliance rules are embedded directly into the protocol:
+
+- **KYC attestations**
+- **Sanctions enforcement**
+- **Court-ordered frozen assets**
+
+Wallets are pseudo-anonymous by default, with identity available only under due process. This ensures broad access while maintaining rule-of-law protections.
+
+### 3. Modern Monetary Tools
+
+The Federal Reserve gains improved visibility and a new monetary throttle:
+
+- **Staking-based liquidity controls**
+- **Transparent yield curves**
+- **No need for interest rate targets or opaque repo mechanics**
+
+These tools enable precision policy interventions without relying on bank balance sheets.
+
+### 4. Multi-Currency Support
+
+The protocol supports issuance of multiple tokens, each governed by its own declared monetary rules. This allows:
+
+- The Federal Reserve to issue multiple tokens (e.g. USD, special-purpose instruments)
+- Other institutions to issue tokens with transparent, auditable supply policies
+- Market-driven currency competition within a compliant framework
+
+### 5. Voluntary Currency Choice & Transparent Taxation
+
+Entities choose which currencies to hold and spend. The public ledger:
+
+- Enables simple, automatic tax reporting
+- Prevents invisible dilution or off-book transfers
+- Improves auditability for governments and businesses
+
+### 6. QR-Cash for Physical Interoperability
+
+Tamper-evident QR-code bearer cash integrates physical use into the digital protocol, allowing:
+
+- Offline payments in disaster or rural areas
+- Private cash-style transactions
+- Treasury-managed issuance with real-time balance verification
+
+### 7. Custodial Banks Remain Relevant
+
+Banks continue to operate as custodians of user funds and wallets:
+
+- Offering synthetic balances and portfolio management
+- Complying with withdrawal controls and internal risk policies
+- Competing on service, not on control over money creation
+
+### Summary
+
+This protocol offers:
+
+- **Modern settlement rails**
+- **Built-in regulatory compliance**
+- **New monetary tools**
+- **Currency choice with transparency**
+- **Institutional continuity**
+
+It is not a speculative crypto project. It is a constitutional, rules-based foundation for the next era of finance.
 
 ---
 
