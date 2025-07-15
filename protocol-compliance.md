@@ -73,6 +73,21 @@ To restore legal safety for individuals and reduce institutional overhead, the D
 | **Auditability** | Enforcement decisions and ledger activity are permanently visible and reproducible. |
 | **Decentralization without Anarchy** | Enables direct access to money without undermining necessary legal structures. |
 
+### Fraud Deterrence and Social Engineering Defense
+
+Protocol-level identity enforcement significantly reduces the surface area for scams, including social engineering attacks like romance fraud or business email compromise.
+
+Unlike traditional systems, every wallet that can receive funds must be KYC-attested by an approved entity. This creates a transparent and verifiable chain of responsibility:
+
+- **Scammers cannot receive funds without an attested wallet.**
+- **Attestors are accountable** for the identities they vouch for.
+- **Victim-facing custodians can trace the recipient wallet**, identify the attestation, and escalate fraud claims immediately.
+- **The Treasury or regulatory authorities can suspend or denylist attestors** that issue fraudulent attestations, closing off abuse vectors quickly.
+
+While this cannot prevent emotional manipulation, it raises the cost of fraud, shrinks the anonymity space, and provides a much faster path to legal and operational redress than legacy systems.
+
+The system protects privacy by default but ensures accountability when due process is invoked.
+
 ---
 
 ## V.  Summary
