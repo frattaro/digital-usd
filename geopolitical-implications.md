@@ -86,7 +86,7 @@ This protocol makes all of those assumptions difficult to maintain:
 - Attestations are issued independently and verifiably
 - Validator nodes must be neutral and globally observable
 
-China **would** be able to identify wallets attested with Chinese nationality or residency (e.g., `country: "CN"`), as these country codes are embedded in the attestation metadata for sanctions compliance. However, it would still lack the ability to:
+China **would** be able to identify wallets attested with Chinese nationality or residency (e.g., `jurisdiction: "CN"`), as these country codes are embedded in the attestation metadata for sanctions compliance. However, it would still lack the ability to:
 - Compel U.S.-approved foreign attestors to reveal underlying identity information
 - Prevent its citizens from using VPNs or QR-cash to access the protocol
 - Prevent wallet creation using foreign attestors unless those attestors operate within its legal jurisdiction

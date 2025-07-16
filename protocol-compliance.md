@@ -54,6 +54,20 @@ To restore legal safety for individuals and reduce institutional overhead, the D
   - (`attestor_id`, `attestation_id`) sanctions lists
 - Deny lists are synced hourly from a U.S. Treasury API service.
 
+#### Extended Jurisdiction Codes for Conditional Sanctions
+
+To support nuanced compliance use cases, attestors (such as the U.S. Treasury) may issue attestations using **extended jurisdiction codes**. These allow for more precise authorization in cases where sanctions include **policy exceptions** for specific goods or purposes.
+
+**Examples**
+
+| Jurisdiction Code | Meaning                                             |
+|-------------------|------------------------------------------------------|
+| `CN.OIL`          | Wallet authorized for oil exports to China          |
+| `RU.MED`          | Wallet authorized for medical exports to Russia     |
+| `IR.HUM`          | Wallet authorized for humanitarian aid to Iran      |
+
+These codes maintain protocol simplicity while enabling **fine-grained, rules-based exemptions** without requiring changes to the ledger or attestation format.
+
 ###  Freeze & Legal Reporting
 - Wallets can be frozen using a sanctions-style deny list.
 
