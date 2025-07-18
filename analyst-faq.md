@@ -51,7 +51,26 @@ Credit behavior remains off-chain. Banks evolve from money creators to regulated
 
 ---
 
-## Q4: How does the Fed respond to crises if it can’t just mint?
+### Q4. Do housing prices fall under this system?
+
+Yes — and that’s a feature, not a bug.
+
+Under the current system, housing prices are inflated not just by demand, but by the artificial expansion of credit through fractional reserve lending. Banks create loanable capital against synthetic deposits, and that credit flows disproportionately into real estate and financial assets.
+
+By removing the ability to lend against non-existent money, the Digital USD protocol restores *real price discovery* in housing. Home prices begin to reflect actual buyer affordability rather than leveraged speculation.
+
+This doesn’t eliminate mortgages. Banks can still issue loans — but only from reserves or from credit extended by the Fed against collateral. This tightens credit conditions without eliminating them.
+
+The result is a **re-anchoring of home values** to economic reality:
+- First-time buyers benefit
+- Speculative demand shrinks
+- Real estate stops functioning as a synthetic savings vehicle
+
+Falling prices are not a crisis. They’re the system correcting for decades of distortion.
+
+---
+
+## Q5: How does the Fed respond to crises if it can’t just mint?
 
 ###  Concern:
 What tools does the central bank have during a liquidity crunch?
@@ -66,7 +85,7 @@ All actions are logged and constrained by protocol logic. Emergency liquidity is
 
 ---
 
-## Q5: Isn’t this system vulnerable to speculative volatility?
+## Q6: Isn’t this system vulnerable to speculative volatility?
 
 ###  Concern:
 Without a single currency, won’t competing tokens introduce instability?
@@ -78,7 +97,7 @@ The protocol does not try to stabilize token prices. It provides the infrastruct
 
 ---
 
-## Q6: How do swaps work without oracles or fixed pricing?
+## Q7: How do swaps work without oracles or fixed pricing?
 
 ###  Concern:
 Without pricing oracles, how are exchange rates determined?
@@ -93,7 +112,7 @@ Prices are emergent, based on pool ratios. First LPs set initial price, and arbi
 
 ---
 
-## Q7: Doesn’t this make wallet management too hard for users?
+## Q8: Doesn’t this make wallet management too hard for users?
 
 ###  Concern:
 Users don’t want to manage portfolios or choose between currencies.
@@ -109,7 +128,7 @@ Nothing prevents banks from offering portfolio optimization, yield harvesting, o
 
 ---
 
-## Q8: Isn’t protocol-level compliance rigid and dangerous?
+## Q9: Isn’t protocol-level compliance rigid and dangerous?
 
 ###  Concern:
 If attestations expire or authorities are delisted, users could be locked out.
@@ -124,7 +143,7 @@ This is safer and more predictable than arbitrary bank account closures.
 
 ---
 
-## Q9: What happens if QR cash is counterfeited?
+## Q10: What happens if QR cash is counterfeited?
 
 ###  Concern:
 Isn’t tamper-evident QR cash vulnerable to forgery or copying?
@@ -139,7 +158,7 @@ If a note has been opened, it’s void. If the wallet is drained, it’s empty. 
 
 ---
 
-## Q10: Does this system eliminate the business cycle?
+## Q11: Does this system eliminate the business cycle?
 
 ### Concern:
 Without centralized interest rate policy and credit stimulation tools, how will the economy handle recessions? Won’t the system be more volatile without the Fed’s ability to intervene?
