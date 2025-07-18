@@ -39,6 +39,31 @@ This strikes a balance between **regulatory enforcement** and **user privacy**.
 
 ---
 
+## 1.1 Outgoing-Only Wallets
+
+Any wallet can be marked as **outgoing-only**, preventing it from receiving funds after creation. This enables a broad range of use cases, including QR-cash, bearer instruments, prepaid access tokens, or disposable wallets used for constrained payouts.
+
+### Characteristics
+
+- **Outgoing-only**: The wallet may send funds but cannot receive additional deposits.
+- **Pre-funded**: Outgoing-only wallets are expected to be funded at the time of creation. Once created, their balances can only decrease.
+- **Limited lifespan**: Once the balance reaches zero, the wallet is automatically burned by the protocol and can no longer be used.
+- **Use case-agnostic**: This is a general-purpose feature. While it enables QR-cash, it is not limited to it.
+
+### Protocol Behavior
+
+- The outgoing-only flag is set at wallet creation time and is immutable.
+- Incoming transfers to outgoing-only wallets are rejected at the protocol level.
+- When the wallet balance reaches zero, it is burned automatically to prevent reuse or confusion.
+
+These rules preserve the integrity of constrained, single-use wallets and ensure they cannot be repurposed or silently reloaded.
+
+### Example Use Case
+
+A company creates thousands of prepaid $5 outgoing-only wallets as promotional credits, distributed via QR code or SMS link. Each wallet can be used once and disappears after being spent. Because the wallets are outgoing-only, users cannot re-fund or hoard them, ensuring controlled distribution.
+
+---
+
 ## 2. Pseudonymity with Public Metadata
 
 Wallets are **pseudonymous** by default. While attestations are public, they do not expose:
