@@ -75,6 +75,56 @@ Yield paid to stakers is minted according to protocol rules and must respect any
 
 ---
 
+### III.a Progressive Yield Tiers (Yield Curve Implementation)
+
+To replace legacy interest rate curves with a programmable, incentive-aligned alternative, the protocol introduces **progressive yield tiers** based on staking duration. Longer commitments earn higher returns, allowing token authorities to shape monetary behavior without coercion.
+
+Yield tiering replaces bond maturity ladders and synthetic yield curves with a direct, transparent alternative.
+
+#### Example Tier Structure (USD Token)
+
+| Lockup Duration   | APY (example) |
+|-------------------|---------------|
+| 7 days            | 2.00%         |
+| 30 days           | 2.50%         |
+| 90 days           | 3.25%         |
+| 180 days          | 4.00%         |
+| 365 days          | 5.00%         |
+
+Yields are set by the token authority and declared in metadata visible to the staking interface.
+
+#### Mechanism
+
+When a user stakes tokens, they must specify a lockup tier (minimum duration). The longer the commitment, the higher the reward — but tokens cannot be unstaked until the duration expires. Attempting to exit early results in forfeiture of pending rewards and a cooldown re-lock penalty.
+
+This achieves:
+
+- **Monetary throttle**: Authorities can discourage velocity by raising long-term yields
+- **Civilizational confidence signal**: Individuals signal long-term economic faith by locking capital
+- **Tax replacement vector**: Encourages voluntary commitment rather than coercive revenue collection
+
+#### Protocol Behavior
+
+- Token authorities define `yield_schedule(token)` mapping lock durations to APY
+- Users select tier at stake time; unstake requests cannot be initiated until the duration expires
+- All rewards are minted and tracked per user stake
+
+#### Inflation Guardrails
+
+Each token must declare an annual `staking_inflation_cap` to ensure total reward minting stays within transparent, pre-declared limits.
+
+#### Governance
+
+Yield schedules can be adjusted over time, but all changes must be:
+
+- Versioned
+- Signed by the token authority
+- Scheduled at least one epoch in advance (e.g., 30 days)
+
+This ensures predictability and prevents manipulation or front-running.
+
+---
+
 ## IV.  Boundaries and Limitations
 
 | Rule | Explanation |
