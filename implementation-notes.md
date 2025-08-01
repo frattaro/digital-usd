@@ -80,7 +80,7 @@ Additional tokens may be created using the same two-step process by other author
 - Attestation is signed and stored on-chain or as verifiable credential
 
 ### 2. Attestation Schema
-```json
+```jsonc
 {
   "wallet": "0xABC...", // wallet identifier - 256-bit hash of public key
   "attestor_id": "attestor:us:001", // any string identifier supplied by US treasury

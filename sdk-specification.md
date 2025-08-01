@@ -29,12 +29,9 @@ This SDK provides programmatic access to the core functionality of the Direct Se
 
 ##  Notes on Staking
 
-- Staking is **not tied to nodes**; it is a **protocol-wide liquidity signal**.
-- Tokens staked are used to provide liquidity for swaps and **earn protocol-defined fees**.
-- Highly inflationary tokens may face low voluntary staking participation.
-- **Token authorities** may mint and stake reserves to ensure minimum liquidity.
-- Staking is also used as a **monetary velocity throttle**, replacing interest rate levers.
-- Protocol enforces that **staked funds cannot be transferred** until unstaked.
+- Staking is **not tied to nodes**.
+- Tokens staked are **earn token authority-defined fees**.
+- Token authorities define staking yield curves as a **monetary velocity throttle**, replacing interest rate levers.
 
 ---
 
